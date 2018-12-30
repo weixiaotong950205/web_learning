@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+
+			font-family: 微软雅黑；
+		}
+		textarea{
+			width: 100px;
+			height: 600px;
+			resize: none;
+		}
+	</style>
+</head>
+<body> 
+	<h1>用户登录界面：</h1>
+	<from action='login.php'>
+		<p>用户名：</p>
+		<p>
+			<input type="text" name="username" value="小虎">
+		</p>
+		<p>爱好：</p>
+		<p>
+			<select name="love[]" size="5" multiple>
+				<option value="linux">linux</opition>	
+				<option value="php">php</opition>
+				<option value="html5">html5</opition>
+			</select>
+		</p>
+		<p>留言：</p>
+		<p>
+			<textarea name="mess"></textarea>
+		</p>
+		<p>
+			<input type="file" name="img">
+		</p>
+</body>
+</html>

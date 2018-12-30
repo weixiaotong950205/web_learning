@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>position</title>
+<style>
+	*{
+		font-family: 微软雅黑；
+		margin: 0px;
+		padding: 0px;
+		}
+	.img{
+		width: 100px;
+		height: 100px;
+		/* background:#888 ; */
+		position: relative;
+		top: 0px;
+		left: 0px;
+	}
+
+	.img img{
+		display: block;
+
+	}
+
+</style>
+<script src="jquery.min.js"></script>    <!-- 引用一个js框架 -->
+</head>
+<body>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<div class="img">
+		<a href="http://www.baidu.com" target="_blank">
+			<img src="gougou.jpg" width="200px" >
+		</a>
+	</div>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaa</h1>
+
+</body>
+<script>
+$('.img').click(function(){
+	s=0;
+	v=10;
+
+	setInterval(function(){
+		s+=v;
+
+		$('img').css({'top':s+'px'});
+	},100);
+});
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		*{
+			font-family:微软雅黑；
+		}
+
+		body{
+			margin: 0px;
+			padding: 0px;
+			background: #aaf;
+		}
+	</style>
+</head>
+<body>
+	<video src="cartoon.mp4" id="video" height="600px"></video>
+	<br>
+	<button id="start">start</button>
+	<button id="stop">stop</button>
+</body>
+<script>
+start=document.getElementById("start");
+stop=document.getElementById("stop");
+video=document.getElementById("video");
+
+start.onclick=function(){
+	video.play();
+}
+stop.onclick=function(){
+	video.pause();
+}
+video.onplay=function(){
+	document.body.style.background="#272822";
+}
+video.onpause=function(){
+	document.body.style.background="#aaf";
+}
+</script>
+</html>
