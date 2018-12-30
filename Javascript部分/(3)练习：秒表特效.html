@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+
+		.clock{
+			width: 300px;
+			height: 100px;
+			background: #888;
+			border-radius: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;   /*使块标签处于正中间*/
+			margin-left:-150px; 
+			color: #fff;  /*文字颜色：白色*/
+			line-height: 100px; /* 文字纵向居中 */
+			text-align: center;/*文字居中*/
+			font-size: 50px;
+			font-weight: bold;/*字体加粗*/
+			cursor: pointer;/*鼠标放上变成小手*/
+		}
+		.clock:hover{  /* 当鼠标移到元素上方（特效）颜色变蓝色 */
+			color: #0ff;  
+		}
+    </style>
+</head>
+<body>
+	<div class='clock'>
+		<span id='sid'></span>
+	</div>
+</body>
+<script>
+sid=document.getElementById('sid'); /*根据ID找到块标签*/
+
+function setTime(){                //此处放这段函数，一刷新就能出来时间，放下面会隔一秒
+	dobj=new Date();  /*日期对象*/
+	hour=dobj.getHours();
+	if(hour<10){
+		hour='0'+hour;  
+	}
+	minute=dobj.getMinutes();
+	if(minute<10){
+		minute='0'+minute;  
+	}
+	second=dobj.getSeconds();
+	if(second<10){
+		second='0'+second;  /*9变成09*/
+	}
+	timestr=hour+':'+minute+':'+second;
+	sid.innerHTML=timestr;/*将内部值改了*/
+}
+setTime(); /*直接调用*/
+
+setInterval(function(){  /*设置定时器*/      //此处有优化：调用函数省去冗余性
+	setTime();
+},1000);
+</script>
+</html>

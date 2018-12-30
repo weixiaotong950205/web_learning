@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		h1{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>00001</h1>   
+	<h1>00002</h1>
+	<h1>00003</h1>
+</body>
+<script>
+objs=document.getElementsByTagName('h1');
+
+for(i=0;i<objs.length;i++){
+	objs[i].setAttribute('s','0');//设置属性,标签身上的属性只可能是字符串
+	objs[i].onclick=function(){
+		s=parseInt(this.getAttribute('s'));//取到这个s值,parseInt字符串转整型
+		if(s%2==0){
+			this.style.background = '#ccc';
+		}else{
+			this.style.background = '#fff';
+		}
+		this.setAttribute('s',s+1);//，使他+1再赋值给自己
+		}
+	
+
+}
+
+
+</script>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+</head>
+<body>
+	<img src="dai.png" id="imgid">
+	
+</body>
+<script>
+imgidobj=document.getElementById('imgid');
+window.onload=function(){  //这里不同的浏览器有兼容性问题,保证页面资源全都下载完毕
+	h=imgidobj.clientHeight;//此时页面标签加载完毕
+	w=imgidobj.clientWidth;
+	document.title=w+'-'+h; 
+}
+
+</script>
+</html> 

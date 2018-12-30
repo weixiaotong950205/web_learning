@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		#redirect{
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			background: #aff;
+			border-radius: 5px;    /* 圆角 */
+			padding-left: 15px;  /* 左页边距 */
+		}
+		#second{
+			font-weight: bold;  /*加粗*/
+			font-size: 18px;
+			color: #0f0;
+		}
+		#btn{
+
+		}
+    </style>
+</head>
+<body>
+	<div id="redirect">     <!-- 跳转div -->
+		<span>页面 <span id="second">3</span> 秒后进行跳转...</span>  
+	</div>
+	
+	<button id="btn">停止跳转</button>
+</body>
+<script>  //做一个减时器，3减到1跳转页面
+
+second=document.getElementById('second');
+
+sobj=null;
+s=3;
+v=-1;
+sobj=setInterval(function(){
+	if(s==0){
+		clearInterval(sobj);//当跳转到0时停止递减
+	 	location='http://www.baidu.com'
+	 }else{
+		s+=v;
+		second.innerHTML=s;
+	}
+},1000);
+
+/*tobj=setTimeout(function(){
+	location='http://www.baidu.com'
+},5000); 这样写也可以，然后下面btnobj.onclick中：clearTimeout(tobj) */
+
+btnobj=document.getElementById('btn');
+//清除超时器
+btnobj.onclick=function(){
+	clearTimeout(sobj);
+}
+</script></html>
+</html>

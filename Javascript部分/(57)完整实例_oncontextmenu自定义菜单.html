@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		#menu{
+			width: 100px;
+			height: 200px;
+			background: #aff;
+			color: #000;
+			font-weight: bold;/* 里面文字白色加粗 */
+			text-align: center;
+			padding-top: 10px;
+			position: absolute;
+			top: 300px;
+			left: 0px;
+			display: none;
+			opacity: 0.7;    /* 透明度 */
+		}
+		#menu a{
+			text-decoration: none;
+			color: #000;
+		}
+		#menu a:hover{ /* 当鼠标移到元素上方 */
+			color: #faf;
+		}
+	</style>
+</head>
+<body>
+	<img src="web.png" id="imgid">
+	<div id="menu">
+		<p><a href="http://www.baidu.com">百度</a></p>
+		<p><a href="http://www.163.com">网易</a></p>
+		<p><a href="">腾讯</a></p>
+		<p><a href="">阿里</a></p>
+		<p><a href="">华为</a></p>
+	</div>
+</body>
+<script>
+menuobj=document.getElementById('menu');
+document.oncontextmenu=function(event){
+	x=event.clientX;
+	y=event.clientY;
+
+	menuobj.style.display='block';//右键出现框框
+	menuobj.style.left=x+'px';
+	menuobj.style.top=y+'px';
+
+	return false;
+}
+document.onclick=function(){
+	menuobj.style.display='none';//左键框框消失
+
+}
+</script>
+</html>

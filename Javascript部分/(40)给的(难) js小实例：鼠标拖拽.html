@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id='div1' style='position: absolute;top:50px;left:50px;'>
+		<img id='id' class='img' src="web.png" width='100px'>
+	</div>
+</body>
+<script>
+  var obj=document.getElementById('div1');
+	obj.deltaX=0;
+	obj.deltaY=0;
+	function dragStart(dragEvent){
+		obj.deltaX=dragEvent.clientX-parseInt(obj.style.left);
+		obj.deltaY=dragEvent.clientY-parseInt(obj.style.top);
+		if(document.all){
+			document.documentElement.setCapture();  //setCapture开始捕捉
+			document.documentElement.attachEvent('onmousemove',dragMove);  //attachEvent 设定或者增加一些事件
+			document.documentElement.attachEvent('onmouseup',dragStop);
+			document.documentElement.attachEvent('onlosecapture',dragStop);
+		}else{
+			document.documentElement.addEventListener('mousemove',dragMove);
+			document.documentElement.addEventListener('mouseup',dragStop);//addEventListener 增加事件监听器
+			dragEvent.preventDefault();
+		}
+	}
+	function dragMove(dragEvent){
+		obj.style.left=(dragEvent.clientX-obj.deltaX)+'px';
+		obj.style.top=(dragEvent.clientY-obj.deltaX)+'px';
+		if(!document.all){
+			dragEvent.preventDefault();
+		}
+	}
+	function dragStop(){
+		if(document.all){
+			document.documentElement.detachEvent('onlosecapture',dragStop);
+			document.documentElement.detachEvent('onmousemove',dragMove);
+			document.documentElement.detachEvent('onmouseup',dragStop);
+			document.documentElement.releaseCapture();
+		}else{
+			document.documentElement.removeEventListener('mousemove', dragMove);
+			document.documentElement.removeEventListener('mouseup', dragStop);
+		}
+	}
+	if(document.all){
+		obj.attachEvent('onmousedown',dragStart);
+	}else{
+		obj.addEventListener('mousedown',dragStart);
+	}
+</script>
+</html>

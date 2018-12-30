@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		img{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="gougou.jpg" id="dog">
+  <!-- 或者<img src="gougou.jpg" onclick="this.src='sd.jpg'">在标签身上绑定事件 --> 
+</body>
+<script>
+dogobj=document.getElementById('dog');
+dogobj.onclick=function(){
+	this.src='sd.png';
+}
+</script>
+</html>

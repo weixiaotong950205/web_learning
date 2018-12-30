@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		img{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="http://www.baidu.com" target="_blank">html5</a>is very good!!</h1>   <!-- target="_blank"点击html5会出现新空白窗口，否则在本窗口打开 -->
+
+	<form action="get.php" target="_blank">  <!-- target="_blank"在新窗口打开 -->
+		<p>用户名：</p>
+		<p><input type="text" name=""></p> 
+		<p>
+			<input type="submit" value="ok">
+		</p>
+	</form>
+	<a href="javascript:" target="_blank" id="aid"> <!-- href="javascript:鼠标扫在图片上的左下角显示，否则显示本文件地址 -->
+		<img src="web.png" id="imgid">
+	</a>
+</body>
+<script>
+aidobj=document.getElementById('aid');
+aidobj.onclick=function(){
+	//(方法一)location='http://www.baidu.com';或者在<img>前面加<a>链接
+	this.href='http://www.baidu.com';
+}
+
+</script>
+</html>

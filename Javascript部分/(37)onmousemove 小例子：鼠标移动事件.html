@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		} 
+		 img{
+		 	cursor: pointer;
+		 	position: absolute;
+		 	top: 0px;
+		 	left:0px;
+		 	width: 100px;
+		 	height: 100px;
+		 }
+		
+    </style>
+</head>
+<body>
+	<img src="sd.png" id='imgid'>
+</body>
+<script>  
+//效果：让图片随着鼠标的移动而移动
+//方法：要时刻计算鼠标的坐标，鼠标每动一下计算坐标，赋给图片的坐标；
+imgidobj=document.getElementById('imgid');
+
+document.onmousemove=function(event){
+	x=event.clientX;//鼠标的x坐标
+	y=event.clientY;
+
+	document.title=x+'-'+y;//修改文档的题目
+
+	imgidobj.style.left=x+'px';//坐标没有单位px,要加上
+	imgidobj.style.top=y+'px';
+}
+
+</script> 
+</html>   

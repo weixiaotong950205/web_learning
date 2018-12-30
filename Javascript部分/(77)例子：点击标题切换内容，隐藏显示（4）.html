@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		h1{
+			cursor: pointer;
+			background: #aaf;
+		}
+	</style>
+</head>
+<body>
+	<h1>Linux技术</h1> 
+	<p>linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!</p>  
+	<h1>PHP技术</h1>
+	<p>php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!</p>
+	<h1>js技术</h1>
+	<p>js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!</p>
+	<h1>html5技术</h1>
+	<p>html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!</p>
+	<h1>mysql技术</h1>
+	<p>mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!</p>
+</body>
+<script>
+//效果：点击标题-内容隐藏，再点击-内容出现
+h1s=document.getElementsByTagName('h1');
+ps=document.getElementsByTagName('p');
+
+
+for(i=0;i<h1s.length;i++){
+	h1s[i].setAttribute('i',0);//i每点击一次，就+1
+	h1s[i].setAttribute('s',i);//s=0->p0,s=1->p1,s=2->p2```
+
+	ps[i].setAttribute('id','p'+i);//如何点击h1找到它后面的p标签,让他俩产生关系
+	
+	h1s[i].onclick=function(){
+		s=this.getAttribute('s');//找到自己的s
+		pobj=document.getElementById('p'+s);//'p'+s
+
+		i=parseInt(this.getAttribute('i'));
+
+		if(i%2==0){
+			pobj.style.display = 'none';
+		}else{
+			pobj.style.display = 'block';
+
+		}
+
+		this.setAttribute('i', i+1);
+	}
+}
+
+</script>
+</html> 

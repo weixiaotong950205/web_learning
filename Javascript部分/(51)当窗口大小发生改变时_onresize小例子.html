@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+</head>
+<body>
+	<img src="dai.png" id="imgid">
+	
+	
+</body>
+<script>
+
+imgidobj=document.getElementById('imgid');
+
+window.onresize=function(){  
+	sw=document.documentElement.clientWidth;
+	if(sw>1000){
+		imgidobj.src='sd.png';
+	}else if(sw>700){
+		imgidobj.src='web.png';
+	}else{
+		imgid.src='dai.png';
+	}
+
+	
+}
+
+</script>
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		img{
+			height: 300px;
+			width: 300px;
+			border-radius: 128px;
+			background: #888;
+			cursor: pointer;/*鼠标滑到图片上变小手——特效*/
+		}
+		
+    </style>
+</head>
+<body>
+	<img src="dai.png" id="imgid">
+</body>
+<script>
+imgid=document.getElementById('imgid');
+
+imgid.onclick=function(){
+	s=0;
+	v=10;
+
+	//创建一个定时器，俩参数（函数，时间）
+	sobj=setInterval(function(){  //将定时器赋给了sobj,赋不赋值都行；sobj定时器对象
+		s+=v;
+		imgid.style.transform = 'rotate('+s+'deg)';//点击图片-顺时针旋转
+		//这里imgid不要用this,this的话指的是这个定时器，不再是onclick的imgid
+	},100);//每过100ms执行前面的函数
+	
+
+}
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+</head>
+<body>
+	<img src="dai.png" id="imgid">
+	<hr>
+	<form action="">
+		<p><input type='text' id="ipt">百度搜索</p>
+
+	</form>
+	
+</body>
+<script>
+//效果：页面一刷新让文本框（百度搜索）获得焦点
+imgidobj=document.getElementById('imgid');
+iptobj=document.getElementById('ipt');
+window.onload=function(){  
+	iptobj.focus();
+}
+
+</script>
+</html> 

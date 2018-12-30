@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	
+	</style>
+</head>
+<body>
+	<h1 id="hid">小阳阳的卡套丢了！！！</h1>
+</body>
+<script>
+hidobj=document.getElementById('hid');
+//最好不要这样设置，不太好！设置标签外部的值
+hidobj.outerHTML='<h1 id="hid">aaaaaaaa</h1>';
+
+//获取标签外部的值；
+alert(hidobj.outerHTML);
+</script>
+</html> 

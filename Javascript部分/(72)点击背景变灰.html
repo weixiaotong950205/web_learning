@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	
+	</style>
+</head>
+<body>
+	<h1>00000001</h1>
+	<h1>00000002</h1>
+	<h1>00000003</h1>
+	<h1>00000004</h1>
+	<h1>00000005</h1>
+</body>
+<script>
+hidobj=document.getElementsByTagName('h1');
+for(i=0;i<hidobj.length;i++){
+	hidobj[i].onclick=function(){
+		//hidobj[i].style.background = '#ccc';这句不正确用this才可以，此句对象未定义，hidobj[i]此时是hidobj[3]；事件对象的触发函数中变量不会再遍历时就执行，在触发时才执行；
+		this.style.background = '#ccc';//能用this就用this
+	}
+}
+
+</script>
+</html> 

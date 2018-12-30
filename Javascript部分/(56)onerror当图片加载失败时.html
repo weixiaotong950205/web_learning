@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<img src="web2.png" id="imgid">
+</body>
+<script>
+imgidobj=document.getElementById('imgid');
+imgidobj.onerror=function(){
+	this.src='sd.png';
+}
+
+</script>
+</html>

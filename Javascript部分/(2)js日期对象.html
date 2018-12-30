@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+    </style>
+</head>
+<body>
+	<img src="gougou.jpg" id='imgid'>
+</body>
+<script>
+dobj=new Date();
+
+year=dobj.getFullYear();
+month=dobj.getMonth()+1;
+day=dobj.getDate();
+week=dobj.getDay();
+hour=dobj.getHours();
+minute=dobj.getMinutes();
+second=dobj.getSeconds();
+
+tstr=year+'年'+month+'月'+day+'日'+'   '+'星期'+week+'  '+hour+'时'+minute+'分'+second+'秒'
+
+alert(tstr);
+</script>
+</html>

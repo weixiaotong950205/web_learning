@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑；
+		}
+		img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="dai.png" width="100px" height="100px" id="imgid">
+</body>
+<script>
+//效果：让键盘控制图片的走向，键盘按上，往上走
+imgobj=document.getElementById('imgid')
+//不让图片走出有效屏幕，不让屏幕出现滚动条
+sw=document.documentElement.clientWidth;//获取可视屏幕的宽
+sh=document.documentElement.clientHeight;//获取可视屏幕的高
+//document.title=sw+'-'+sh;//显示一下
+dw=sw-100;//图片是100px,dw为实际上图片向右的最大距离
+dh=sh-100;//图片是100px,dh为实际上图片向下的最大距离
+
+//注：将键盘绑定到document上，要不键盘按不到图片身上
+ys=0; //纵坐标初始值
+yv=10;//纵坐标增量
+
+xs=0;//横坐标初始值
+xv=10;//横坐标增量
+
+document.onkeydown=function(event){
+	ek=event.keyCode;//左上右下键值 37/38/39/40
+	//alert(ek);
+	switch(ek){
+		case 37://左
+			xs-=xv;
+			if(xs<=0){
+				xs=0;
+			}
+			document.title=xs;
+			imgobj.style.left=xs+'px';
+			break;
+
+		case 38: //上
+			ys-=yv;
+			if(ys<=0){
+				ys=0;
+			}
+			document.title=ys;
+			imgobj.style.top=ys+'px';
+			break;
+
+		case 39://右
+			xs+=xv;
+			if(xs>=dw){
+				xs=dw;
+			}
+			document.title=xs;
+			imgobj.style.left=xs+'px';
+			break;
+
+		case 40://下
+			ys+=yv;
+			if(ys>=dh){
+				ys=dh;
+			}
+			document.title=ys;
+			imgobj.style.top=ys+'px';
+			break;
+	}
+}
+
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑；
+		}
+		img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h2>表单事件：</h2>
+	<form action="">
+		<p>用户名：</p>
+		<p><input type="text" id='username' ></p>
+		<p>密码：</p>
+		<p><input type="text" id='password'></p>
+		<p>
+			<input type="submit" value="确定">
+			<input type="reset" value="取消">
+		</p>
+	</form>
+</body>
+<script>
+usernameobj=document.getElementById('username');
+usernameobj.onblur=function(){   //失去焦点时判断密码长度
+	l=this.value.length;
+	document.title=l;
+
+	if(l<8){
+		alert('用户名长度至少8位');
+	}
+}
+
+</script>
+</html>

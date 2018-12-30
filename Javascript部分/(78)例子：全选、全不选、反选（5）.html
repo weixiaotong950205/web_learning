@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		h1{
+			cursor: pointer;
+			background: #aaf;
+		}
+	</style>
+</head>
+<body>
+	<h2>请选择以下选项：</h2>
+	<form action="">
+		<p>
+			<label><input type="checkbox" class="chk">linux</label>
+		</p>
+		<p>
+			<label><input type="checkbox" class="chk">php</label>
+		</p>
+		<p>
+			<label><input type="checkbox" class="chk">javascript</label>
+		</p>
+		<p>
+			<input type="button" value="全选" id="btn1">  <!-- 这种不会提交表单；<button>ok</button>  这种会提交表单 -->
+			<input type="button" value="全不选" id="btn2">
+			<input type="button" value="反选" id="btn3">
+		</p>
+	</form>
+</body>
+<script>
+//全选、全不选、反选
+btn1obj=document.getElementById('btn1');
+btn2obj=document.getElementById('btn2');
+btn3obj=document.getElementById('btn3');
+chks=document.getElementsByClassName('chk');
+//全选
+btn1obj.onclick=function(){
+	for(i=0;i<chks.length;i++){
+		chks[i].checked=true;  //checkd-多选框标准属性,可以用.直接写-
+	}
+}
+//全不选
+btn2obj.onclick=function(){
+	for(i=0;i<chks.length;i++){
+		chks[i].checked=false;  //checkd-多选框标准属性,可以用.直接写-
+	}
+}
+//反选:先判断，如果是true就改为false,如果是false就改为true
+btn3obj.onclick=function(){
+	for(i=0;i<chks.length;i++){
+		chks[i].checked=!chks[i].checked;//！取反
+	}
+}
+
+
+</script>
+</html> 

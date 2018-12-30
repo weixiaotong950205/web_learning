@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+
+		select{
+			height: 150px;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h2>请选择你喜欢的水果：</h2>
+	<form action="">
+		<select name="" id="s1" size='2'>  <!-- 下拉菜单 -->
+			<option value="">苹果</option>
+			<option value="">橙子</option>
+			<option value="">香蕉</option>
+			<option value="">红枣</option>
+			<option value="">火龙果</option>
+			<option value="">荔枝</option>
+		</select>
+		<input type="button" value=">>" id="btn">
+		<select name="" id="s2" size='2'></select>
+	</form>
+</body>
+<script>
+//点击左框中的水果，左边消失并显示在右框中
+s1obj=document.getElementById('s1');
+s2obj=document.getElementById('s2');
+btnobj=document.getElementById('btn');
+
+ btnobj.onclick=function(){
+ 	idx=s1obj.selectedIndex; //左边被选择的人的索引号-selectedIndex
+ 	
+  	opts=s1obj.options;//通过s1obj找到左边所有的option
+  	opt=opts[idx];
+  	s2obj.add(opt);
+ }
+</script>
+</html> 

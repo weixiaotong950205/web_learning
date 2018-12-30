@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		h1{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>aaaaa</h1>   
+	<h1>bbbbb</h1>
+	<h1>ccccc</h1>
+	<h1>ddddd</h1>
+	<h1>eeeee</h1
+</body>
+<script>
+objs=document.getElementsByTagName('h1');
+//思路：给每行字都附一个数字，点击的时候取出来赋给他们的innerHTML
+for(i=0;i<objs.length;i++){
+	objs[i].setAttribute('s',i+1);//1,2,3,4,5
+	objs[i].onclick=function(){
+		s=this.getAttribute('s');
+		this.innerHTML=s;	
+		}
+}
+
+</script>
+</html> 

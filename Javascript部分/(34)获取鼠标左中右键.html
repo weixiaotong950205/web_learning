@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		} 
+		 img{
+		 	cursor: pointer;
+		 }
+		
+    </style>
+</head>
+<body>
+	<img src="sd.png" id='imgid'>
+</body>
+<script>  
+imgidobj=document.getElementById('imgid');
+
+/*
+imgidobj.onmousedown=function(evevt){  //鼠标按下触发事件；
+ 	alert(event.button);//鼠标左键点击：0；右键：2；中键：1；
+ 	this.style.background = '#888';
+ }
+ imgidobj.onmouseup=function(){  //鼠标弹起触发事件；
+ 	this.style.background = '#000';
+ }
+*/
+imgidobj.onmousedown=function(event){
+	eb=event.button;
+	switch(eb){
+		case 0:
+		//鼠标左键；
+			this.style.background = '#faa';
+			break;
+		case 1:
+		//鼠标中间滚轮	
+			this.style.background = '#afa';
+			break;
+		case 2:
+		//鼠标右键	
+			this.style.background = '#aaf';
+			break;
+	}
+}   
+imgidobj.onmouseup=function(){
+	this.style.background='#fff';
+}
+
+</script> 
+</html>   

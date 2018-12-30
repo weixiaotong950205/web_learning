@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	
+	</style>
+</head>
+<body>
+	<h2>表单事件：</h2>
+	<form action="get.php" class='abc' method="post" id="fid" sex='nv' age='20'>
+		<p>用户名：</p>
+		<p><input type="text" id='username'></p>
+		<p>密码：</p>
+		<p><input type="text" id='password'></p>
+		<p>
+			<input type="submit" value="确定">
+			<input type="reset" value="取消">
+		</p>
+	</form>
+</body>
+<script>
+fidobj=document.getElementById('fid');
+//获取标准或非标准属性的同一方法
+s=fidobj.getAttribute('action');
+alert(s);
+
+</script>
+</html> 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑；
+		}
+		img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h2>表单事件：</h2>
+	<form action="">
+		<p>用户名：</p>
+		<p><input type="text" id='username'></p>
+		<p>密码：</p>
+		<p><input type="text" id='password'></p>
+		<p>
+			<input type="submit" value="确定">
+			<input type="reset" value="取消">
+		</p>
+	</form>
+</body>
+<script>
+usernameobj=document.getElementById('username');
+usernameobj.onfocus=function(){  //获得焦点时
+ 	document.title=1;
+ }
+
+usernameobj.onblur=function(){   //失去焦点时
+	document.title=2;
+}
+
+</script>
+</html>

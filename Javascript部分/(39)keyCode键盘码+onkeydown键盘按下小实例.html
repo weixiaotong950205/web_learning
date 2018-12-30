@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		} 
+		
+    </style>
+</head>
+<body>
+	<form action="">
+		<p>用户名：</p>
+		<p><input type="text" name=""></p>
+		<p>密码：</p>
+		<p><input type="text" name=""></p>
+		<p>验证码：X2Jk</p>  <!-- 让用户无论输入的是大写还是小写，都变成小写 -->
+		<p><input type="text" id='verify'></p>
+		<p>
+			<input type="submit" value="ok">
+		</p>
+	</form>
+</body>
+<script>  
+
+document.onkeydown=function(event){   //event
+	ek=event.keyCode;//keyCode键盘码
+	document.title=ek;
+
+	switch (ek) {
+		case 82:
+			document.body.style.background = '#faa';//R键按下，变背景颜色
+			break;
+		case 71:
+			document.body.style.background = '#afa';//G键，变背景颜色
+			break;
+		case 66:	
+			document.body.style.background = '#aaf';//B键，变背景颜色
+			break;
+	}
+	
+}
+	
+
+
+</script> 
+</html>   

@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		} 
+		
+    </style>
+</head>
+<body>
+	<form action="">
+		<p>用户名：</p>
+		<p><input type="text" name=""></p>
+		<p>密码：</p>
+		<p><input type="text" name=""></p>
+		<p>验证码：dsce</p>  <!-- 让用户无论输入的是大写还是小写，都变成小写 -->
+		<p><input type="text" id='verify'></p>
+		<p>
+			<input type="submit" value="ok">
+		</p>
+	</form>
+</body>
+<script>  
+verifyobj=document.getElementById('verify');
+verifyobj.onkeyup=function(){
+	document.title=this.value; //键盘弹起就赋给网页标题
+	this.value=this.value.toLowerCase();//把自己的值变成小写并赋给自己
+}
+
+</script> 
+</html>   
