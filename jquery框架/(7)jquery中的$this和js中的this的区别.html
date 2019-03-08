@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1 id='hid'>00001</h1>  
+	
+</body>
+<script>
+//为了用户方便---jquery使用方法
+$('h1').click(function(){
+	$(this).css({'background':'#aaf'}); //$(this)是把转成了jquery对象
+}）;
+//实际是转化成下面的代码：
+h1.obj.onclick=function(){
+	this.style.background='#aaf';  //this
+};
+</script>
+</html>

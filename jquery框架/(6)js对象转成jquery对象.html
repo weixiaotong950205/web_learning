@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1 id='hid'>00001</h1>  
+	
+</body>
+<script>
+obj=document.getElementById('hid');
+
+$(obj).click(function(){
+	$(this).css({'background':'#aaf'});
+});
+</script>
+</html>

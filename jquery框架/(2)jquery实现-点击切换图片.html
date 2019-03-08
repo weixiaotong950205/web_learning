@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<img src="dai.png">
+</body>
+<script>//实现单击切换图片效果，toggle()也能实现，但是jquery9以后就取消这个用法了
+i=0;
+$('img').click(function(){
+	if (i%2==0) {
+		this.src='cai.jpg';
+	}else{
+		this.src='dai.png';
+	}
+	i++;
+});
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+
+		h1{
+			background: #aaf;
+			cursor: pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>Linux技术</h1> 
+	<p>linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!</p>  
+	<h1>PHP技术</h1>
+	<p>php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!</p>
+	<h1>js技术</h1>
+	<p>js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!</p>
+	<h1>html5技术</h1>
+	<p>html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!</p>
+	<h1>mysql技术</h1>
+	<p>mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!</p>
+</body>
+<script>
+$('h1').click(function(){  //jquery是click,不是onclick
+	//alert(1);  //点击每一个h1都弹出一个1
+	$(this).next().toggle(1000);//toggle单击切换显示与隐藏的效果,1000ms特效的时间
+});
+</script>
+</html>

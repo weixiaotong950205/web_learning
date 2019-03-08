@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>aaaaaaa</h1>  
+	<h1>bbbbbbb</h1>  
+	<h1>ccccccc</h1>  
+	<h1>ddddddd</h1>  
+</body>
+<script> //get()把jquery对象转成对象数组
+arr=$('h1').get();
+
+for(i=0;i<arr.length;i++){
+	arr[i].onclick=function(){
+		this.style.background='#aaf';
+	};
+}
+</script>
+</html>

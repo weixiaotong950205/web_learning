@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>00001</h1>  
+	
+</body>
+<script>
+//alert($('h1'));  ->object object
+//alert($('h1')[0]);  ->objectHTMLHeadingElement
+$('h1')[0].onclick=function(){  //此时已经是js/DOM对象了，必须是onclick而不是click
+	this.style.background='#ccc';
+};
+</script>
+</html>

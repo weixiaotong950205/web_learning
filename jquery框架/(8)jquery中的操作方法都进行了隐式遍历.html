@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>aaaaaaa</h1>  
+	<h1>bbbbbbb</h1>  
+	<h1>ccccccc</h1>  
+	<h1>ddddddd</h1>  
+	
+</body>
+<script> //点击每行，内容变成行号
+
+$('h1').click(function(){
+	this.innerHTML='abc';  
+});
+//原理：
+objs=document.getElementsByTagName('h1');
+for(i=0;i<objs.length;i++){
+	objs[i].onclick=function(){
+		this.innerHTML='abc';
+	};
+}
+//应该把每一行都赋予一个行号值，并且隐藏他，点击的时候在把它呈现出来；
+</script>
+</html>

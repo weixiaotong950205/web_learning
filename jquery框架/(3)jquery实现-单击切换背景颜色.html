@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>00001</h1>  <!-- h1{$$$$$}*3 -->
+	<h1>00002</h1>
+	<h1>00003</h1>
+</body>
+<script>//实现单击每一个h1,h1的背景都变成浅蓝色
+i=0;
+$('h1').click(function(){  //click里面自己做了遍历
+	if(i%2==0){
+		$(this).css({'background':'#aaf'});
+	}else{
+		$(this).css({'background':'#aff'});
+	}
+	i++;
+	
+});
+</script>
+</html>

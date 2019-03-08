@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		h1{
+			background: #aff;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>aaaaaaa</h1>  
+	<h1>bbbbbbb</h1>  
+	<h1>ccccccc</h1>  
+	<h1>ddddddd</h1>  
+</body>
+<script> //点击每行，内容变成行号
+$('h1').each(function(i){  //注意这里有i
+	$(this).attr({s:i+1});  //attr每一行都隐藏了一个s,对应着数字-行号
+});
+
+$('h1').click(function(){
+	s=$(this).attr('s');
+	this.innerHTML=s;  //也可以用jquery写成  $(this).html(s);
+});
+
+</script>
+</html>
