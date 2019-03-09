@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>  
+	<h1>aaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaa</h1>
+	
+</body>
+<script>  //点击变行号
+$('h1').each(function(i){
+	$(this).data({'s':i+1});   //data()向元素附加数据，然后取回该数据;不在标签身上
+});	
+	$('h1').click(function(){
+		s=$(this).data('s');
+		$(this).html(s);
+	
+});
+</script>
+</html>

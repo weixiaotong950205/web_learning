@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		button{
+			background: #aff;
+			cursor:pointer;
+		}
+		.pcls{
+			border: 5px solid #888;  /* 边框 */
+			border-radius: 5px;
+			display: none;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>  
+	<p>
+		<button>Linux技术</button>
+		<button>PHP技术</button>
+		<button>js技术</button>
+	</p>
+	<p class="pcls">linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!</p>  
+	<p class="pcls">php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!</p>
+	<p class="pcls">js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!</p>
+	
+</body>
+<script>  //大块内容都隐藏了，默认第一内容显示;点击按钮，显示对应的内容
+$('.pcls').first().show();
+
+$('button').click(function(){
+	idx=$(this).index('button');
+	$('.pcls').eq(idx).show()    //让pcls中第index个显示;eq() 方法将匹配元素集缩减值指定 index 上的一个。
+	$('.pcls').not($('.pcls').eq(idx)).hide();  //除了上面的$('.pcls').eq(idx).show()，其他都隐藏
+});
+</script>
+</html>
