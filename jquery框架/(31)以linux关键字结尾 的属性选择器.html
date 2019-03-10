@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>  
+	<h1 title="linux">001</h1>
+	<h1 title="linuxphp">002</h1>
+	<h1>003</h1>
+	<h1 title="phplinux">004</h1>
+	<h1>005</h1>
+</body>
+<script>  
+$('h1[title$=linux]').css({'background':'#faf'});  //以linux关键字结尾 的属性选择器
+</script>
+</html>

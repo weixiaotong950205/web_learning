@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style> 
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+	<script src="jquery.min.js"></script>
+
+</head>
+<body>  
+	<div>
+		<h1>0001</h1>
+		<h1>0002</h1>
+		<h1>0003</h1>
+	</div>
+	
+	<hr>
+
+	<div>
+		<h1>001</h1>
+		<h1>002</h1>
+		<h1>003</h1>
+	</div>
+</body>
+<script>  
+//$('div h1:first').css({'background':'#faf'});  //六个h1里面的第一个
+$('div h1:first-child').css({'background':'#faf'});  //上下各第一个h1;  last-child每一个div里面的最后一个h1
+</script>
+</html>
