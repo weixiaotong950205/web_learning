@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta c harset="UTF-8">
+	<title>Document</title>
+	<style> 
+		*{
+			font-family: 微软雅黑；
+		}
+		img{
+			cursor:pointer;
+		}
+		.imgcls{
+			background: #272822;
+			border: 5px solid #f00;
+			border-radius: 20px;
+			opacity: 0.7;/*透明度*/
+
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+ 
+</head>
+<body>
+	<img src="dai.png">
+</body>
+<script>
+i=0;
+$('img').click(function(){
+	if(i%2==0){
+		$(this).addClass('imgcls');
+	}else{
+		$(this).removeClass('imgcls');
+	}
+	i++;
+});
+</script>
+</html>  

@@ -1,0 +1,37 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style> 
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+	<script src="jquery.min.js"></script>
+ 
+</head>
+<body>
+	<h2>请选择你喜欢的水果：</h2>
+	<form action="">
+		<select name="" id="s1" size='6'>  <!-- 下拉菜单 -->
+			<option value="">苹果</option>
+			<option value="">橙子</option>
+			<option value="">香蕉</option>
+			<option value="">红枣</option>
+			<option value="">火龙果</option>
+			<option value="">荔枝</option>
+		</select>
+		<input type="button" value=">>" id="btn">
+		<select name="" id="s2" size='6'></select>
+	</form>
+</body>
+<script>
+$(':button').click(function(){  //此处是：button而不是button
+	opt=$('#s1 option:selected');
+	$('#s2').append(opt); //左侧边框的元素进入右边边框； $('#s2').append(opt.clone());是左边的元素克隆一份进入右边
+});
+
+</script>
+</html>  

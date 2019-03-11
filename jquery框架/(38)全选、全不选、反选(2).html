@@ -1,0 +1,54 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style> 
+		*{
+			font-family: 微软雅黑；
+		}
+		
+	</style>
+	<script src="jquery.min.js"></script>
+ 
+</head>
+<body>  
+	<h1>选择城市：</h1>
+	<form  action="">
+		<p>
+			<label>
+				<input type="checkbox" class="chk">北京
+			</label>
+		</p>
+		<p>
+			<label>
+				<input type="checkbox" class="chk">上海
+			</label>
+		</p>
+		<p>
+			<label>
+				<input type="checkbox" class="chk">太原
+			</label>
+		</p>
+		<p>
+			<input type="button" value="全选">
+			<input type="button" value="全不选">
+			<input type="button" value="反选">
+		</p>
+		
+	</form>
+</body>
+<script>  //prop()(property)函数的设计目标是用于设置或获取指定DOM元素(指的是JS对象，Element类型)上的属性；attr()(attribute)函数的设计目标是用于设置或获取指定DOM元素所对应的文档节点上的属性。
+$(':button:eq(0)').click(function(){
+	$('.chk').prop({'checked':true});//全选
+});
+$(':button:eq(1)').click(function(){
+	$('.chk').prop({'checked':false});//全不选
+});
+$(':button:eq(2)').click(function(){
+	$('.chk').each(function(){
+		this.checked=!this.checked;  //反选
+	});
+});
+</script>
+</html>
