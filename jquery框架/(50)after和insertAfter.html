@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>append</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		.div1{
+			height: 280px;
+			border: 5px solid #f00;
+		}
+		.div2{
+
+
+			height: 280px;
+			border: 5px solid #0ff;
+		}
+		img{
+			cursor: pointer;
+		}
+	
+	</style>
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="div1">
+		<img src="a.jpg">
+		<img src="b.jpg">
+		<img src="c.jpg">
+		<img src="d.jpg">
+	</div>
+	<hr>
+	<div class="div2"></div>
+</body>
+<script>
+$('.div1 img').click(function(){
+	//$('this').insertAfter('.div2');
+	$('.div2').after($(this));
+});
+</script>
+</html>
