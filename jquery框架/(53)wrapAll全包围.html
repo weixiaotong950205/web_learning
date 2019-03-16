@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>append</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+	
+	</style>
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<p>aaaaaaaaaaa</p>
+	<p>aaaaaaaaaaa</p>
+	<p>aaaaaaaaaaa</p>
+	<button>触发</button>
+</body>
+<script>
+$('button').click(function(){
+	$('p').wrapAll('<h2>');
+});
+</script>
+</html>
