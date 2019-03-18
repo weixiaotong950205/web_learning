@@ -1,0 +1,27 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		img{
+			cursor: pointer;
+		}
+	
+	</style>
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<img src="dai.png">
+</body>
+<script>
+$('img').bind('click',function(){  //bind绑定事件
+	this.src='web.png';
+});
+
+</script>
+</html>

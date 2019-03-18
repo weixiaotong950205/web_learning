@@ -1,0 +1,32 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	
+	</style>
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<h1>200</h1>
+</body>
+<script>
+i=0;
+$('h1').bind('click',function(){
+	if(i<=0){
+		val=parseInt($(this).html())+1;//使赞数加一
+		$(this).html(val);
+	}else{
+		alert('您已经点过赞啦！！');
+	}
+	i++;
+})
+
+
+</script>
+</html>

@@ -1,0 +1,202 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+			margin: 0px;
+			padding: 0px;
+			font-size: 16px;
+		}
+		body{
+			margin: 0px;   /* body的margin给去掉 */
+		}
+		.main{
+			
+			width: 1210px;
+			margin:0 auto;  /* 居中 */
+			margin-top: 15px;
+			
+		}
+		.menu{
+			list-style: none;
+			height: 44px;
+			line-height: 44px;/* 行高也是44px */
+		}
+		.menu li{
+			float: left;  /*li都变成一横排 */
+			margin-left: 40px;/* 每个li左边都留15px左边距 */
+			cursor: pointer;
+		}
+
+		.menu li:hover{   /* 在滑动鼠标的过程中 */
+			color: #f00;
+		}
+		.menu li:first-child{  /* li中第一个元素 */
+			background: #B1191A;
+			width: 210px;
+			text-align: center;  /* 文字居中 */
+			color: #fff;
+			margin-left: 0px;
+		}
+		.leftmenu{
+			height: 470px;
+			
+		}
+		.left{
+			width: 300px;
+			height: 100%;
+			background: #C81623;
+			float: left; /* 要三个div全都浮动图片才能放进div大框内 */ 
+		}
+
+		.center{
+			float: left;
+			width: 590px;
+			height: 100%;  /* 也就是470px */
+			background: #f0f;
+			position: relative;
+			top: 0px;
+			left: 0px;
+		}
+		.center img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -295px;
+			margin-top: -235px;
+			display: block;
+		}
+
+		.right{
+			float: left;
+			width: 320px;
+			height: 470px;
+			position: relative;
+		}
+		.right img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -195.5px;
+			margin-top: -235.5px;
+			display: block;
+		}
+		.rightdiv{
+			width: 910px;
+			background: #eee;
+			height: 470px;
+			display: none;  /* 将右边隐藏,左侧的显示就正常了 */
+			position: absolute;
+			z-index: 1;/* ?高度比其他的都高 */
+			left: 300px;/* 令rightdiv显示在右边一点,这样右边的rightdiv就显示正常了 */
+			top: 0px;
+		}
+		.leftul{
+			list-style:none;  /* 去掉ul左边的点点 */
+		}
+		.leftli{
+			line-height: 31px;  /* 行高 */
+			padding-left: 15px; /* 文字左边的间距 */
+			position: relative; 
+		}
+		/* .leftli:hover{ 鼠标往上一划，字体变成红色；背景变成灰色
+			background: #ccc; */
+			/* color: #f00;这样设置错误，字体在a链接里面lefta,用jq */
+
+		
+
+		.lefta{
+			text-decoration: none;
+			color: #fff;
+			font-size: 14px;  /* 字体大小改变 */
+		}
+
+
+	</style>
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<ul class="menu">
+			<li>全部商品分类</li>
+			<li>服装城</li>
+			<li>美妆馆</li>
+			<li>京东超市</li>
+			<li>京东生鲜</li>
+			<li>全球购</li>
+			<li>闪购</li>
+			<li>团购</li>
+			<li>拍卖</li>
+			<li>典当</li>
+		</ul>
+		<div class="leftmenu">
+			<div class="left">
+				<ul class="leftul">
+					<li class="leftli">
+						<a href=" " class="lefta">家用电器</a> <!-- 鼠标往上滑的时候，a链接里面还有一个框页面 -->
+						<div class="rightdiv">
+							<span>家用电器家用电器家用电器家用电器家用电器家用电器家用电器家用电器家用电器家用电器家用电器家用电器</span>
+
+						</div>
+					</li>
+					<li class="leftli">
+						<a href=" " class="lefta">手机、运营商、数码</a> 
+						<div class="rightdiv">
+							<span>手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码手机、运营商、数码</span>
+
+						</div>
+					</li>
+					<li class="leftli">
+						<a href=" " class="lefta">电脑、办公</a> 
+						<div class="rightdiv">
+							<span>电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公电脑、办公</span>
+
+						</div>
+					</li>
+					<li class="leftli">
+						<a href=" " class="lefta">家具家居</a> 
+						<div class="rightdiv">
+							<span>家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居家具家居</span>
+
+						</div>
+					</li>
+					<li class="leftli">
+						<a href=" " class="lefta">男装、女装</a> 
+						<div class="rightdiv">
+							<span>男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装男装、女装</span>
+
+						</div>
+					</li>
+				</ul>
+			
+			</div>
+			<div class="center">
+				<img src="jingdong.jpg" alt=""><!-- 要三个div全都浮动图片才能放进div大框内 -->
+			</div>
+			<div class="right">
+				<img src="right.png">
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$('.leftli').mouseenter(function(){  //鼠标滑入，leftli背景变成灰色，字体变成红色;并让div显示
+	$(this).css({'background':'#eee'});
+	$(this).find('a.lefta').css({'color':'#f00'});
+	$(this).find('div.rightdiv').css({'left':
+	'300px'}).show();//显示的坐标不对,让rightli的position为relative,rightdiv变成absolute
+});
+$('.leftli').mouseleave(function(){  //鼠标离开，变回原来的样子
+	$(this).css({'background':'#C81623'});
+	$(this).find('a.lefta').css({'color':'#fff'});
+	$(this).find('div.rightdiv').hide();
+
+});
+
+
+</script>
+</html>
