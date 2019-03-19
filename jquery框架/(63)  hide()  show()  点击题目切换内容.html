@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	
+	</style>
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<h1>Linux技术</h1> 
+	<p>linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!linux is very good!!</p>  
+	<h1>PHP技术</h1>
+	<p>php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!php is very good!!</p>
+	<h1>js技术</h1>
+	<p>js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!js is very good!!</p>
+	<h1>html5技术</h1>
+	<p>html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!html5 is very good!</p>
+	<h1>mysql技术</h1>
+	<p>mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!mysql is very good!!</p>
+</body>
+<script>
+// 方法一 $('h1').click(function(){
+// 	$(this).next().toggle(500);
+// });
+//alert($);说明方法存在
+$('h1').attr({'s':0});//设置属性
+$('h1').click(function(){
+	s=parseInt($(this).attr('s'));
+
+	if(s%2==0){
+		$(this).next().hide(500);
+	}else{
+		$(this).next().show(500);
+	} 
+	$(this).attr({'s':s+1})
+});
+</script>
+</html>
