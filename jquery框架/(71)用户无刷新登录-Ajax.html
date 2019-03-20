@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑；
+		}
+		.main{
+			width: 1300px;
+			margin: 0 auto;
+		}
+		.logo{
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.login{
+			float: right;  /* 登录-在右边浮动 */
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.header{
+			background: #272822;
+			height: 50px;
+			padding:0 15px;
+			line-height: 50px;
+			
+		}
+		.content{
+			position: relative;
+		}
+		.footer{
+			background: #272822;
+			height: 50px;
+		}
+		a{
+			text-decoration: none;
+			color: #fff;
+		}
+		a:hover{
+			color: #0ff;
+		}
+		.login-in{
+			width: 500px;
+			height: 270px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background: #ccc;
+			margin-left:-250px;
+			margin-top:-135px;  /* 放入正中间 */
+			border-radius: 5px 100px;
+			padding-left:70px ;
+			padding-top: 10px;
+			display: none; /*  让这个框框先消失，点击登录-无需刷新就右上角显示‘魏晓童已登录’ */
+		}
+		.login-in p{
+			font-weight: bold;
+		}
+		.ctl{
+			width: 400px;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<span class="logo">云之梦</span>
+			<span class="login"><a href='jacascript:' class="log">登录</a></span>
+		</div>
+		<div class="content">
+			<h1>00001</h1>
+			<h1>00002</h1>
+			<h1>00003</h1>
+			<h1>00004</h1>
+			<h1>00005</h1>
+			<div class="login-in">
+				<form action="">
+					<p>用户名：</p>
+					<p><input type="text" name="username" class="ctl"></p>
+					<p>密码：</p>
+					<p><input type="text" name="password" class="ctl"></p>
+					<p>
+						<input type="button" value="登录" class="ok"> <!-- 设置这个button点击不会提交表单，点击是没有用的 -->
+						<input type="reset" value="取消" class="cancel">
+					</p>
+
+
+				</form>
+
+			</div>
+		</div>
+		<div class="footer"></div>
+
+		
+	</div>
+	
+
+</body>
+<script>//一点击登录-无需刷新-消失的登录框框就出现-右上角显示‘魏晓童已登录’
+$('.log').click(function(){
+	$('.login-in').slideDown(1000); //消失的登录框框-出现
+});
+
+$('.ok').click(function(){
+	str=$('form').serialize();//序列化表格内容为字符串，用于ajax请求-eg.username=user&password=123
+	$.get('check.php',str,function(r){  //check.php有问题，不能调用？？
+		if(r=='1'){
+			//alert('用户名和密码正确！');
+			$('.login-in').slideUp(1000);//输入正确-框框自动消失
+		}else{
+			alert('用户名和密码有误！');
+			$('input[name=username]').val('').focus();//输入错误-将输入框清空并且光标位于输入框内-放不安用户直接输入
+		}
+	});
+})
+</script>
+</html>
