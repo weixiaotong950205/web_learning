@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style>
+		*{
+			font-style: 微软雅黑;
+		}
+
+	</style>
+	<script src='jquery.min.js'></script>
+</head>
+<body>
+	<h1>aaaaaaaaaaaaa</h1>
+</body>
+<script>
+str="{'name':'user1','age':'20'}";//{}是json对象；加了引号"{}"就不是了，是字符串了，用eval()
+//alert(str.name);//undefined
+obj=eval('('+str+')');
+alert(obj.name);//这样eval就把字符串转成了json对象,可以取name/age了
+</script>
+</html>

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style>
+		*{
+			font-style: 微软雅黑;
+		}
+		.error{
+			color: #f00;
+			font-weight: bold;
+			display:none;
+		}
+
+	</style>
+	<script src='jquery.min.js'></script>
+</head>
+<body>  <!-- 表单验证的思路 -->  <!-- 验证码需要php的支撑 -->
+	<h2>注册用户：</h2>
+	<hr>
+	<form action="go.php">  <!-- 当tot==5时，表单提交到go.php -->
+		<p>用户名:</p> <!-- 检查用户名是否存在 --><!-- 要传到php里面去，查一下php里面是否存在，如果存在，就要另起别的名字，既需要Ajax又需要js与php通讯 --><!-- 要去数据库里面看有没有 -->
+		<p>
+			<input type="text" name="" class="auth user" name="username"> 
+			<span class="error">用户名已存在！</span> 
+		</p>
+		<p>密码：</p>
+		<p>
+			<input type="text" name="" class="auth pass" name="password"> 
+			<span class="error">密码长度至少四位</span> 
+		</p>
+		<p>确认密码：</p>  <!-- 密码长否是否够6位 or 检查两次密码是否一致 -->
+		<p>
+			<input type="text" name="" class="auth repass" name="repassword"> 
+			<span class="error">两次密码不一致</span> 
+		</p>
+		<p>邮箱：</p>  <!-- 检查邮箱格式 -->
+		<p>
+			<input type="text" name="" class="auth email" name="email"> 
+			<span class="error">邮箱格式不正确</span> 
+		</p>
+		<p>手机：</p>  <!-- 可以检查手机格式 -->
+		<p>
+			<input type="text" name="" class="auth phone" name="phone">  
+		</p>
+		<p>
+			<input type="button" value="提交" class="ok"> <!-- button就是永远提交不了，就是一个死按钮 ；type=submit可以提交-->
+			<input type="reset" value="重置">
+		</p>
+	</form>
+</body>
+<script>
+//表单全都对才能提交，只要有一个不对就不能提交；
+ //思路：给每一个性质都附上属性--s=0/1;若正确就是1-hide，错误就是0-show;看最后加和是不是等于5，是的话就可以提交；
+$('.auth').data({'s':0});//data也是赋值的方法，attr赋值需要将字符串变成整型，麻烦；
+
+
+
+//鼠标一拿开，就做判断-用户名是否已存在
+$('.user').blur(function(){//blur当失去焦点的时候
+	val=$.trim(this.value);//获取框框里面的值;   $.trim去空格
+	obj=$(this);
+	//异步
+	// $.get('get.php',{'username':val},function(r){//带给php,php返回一个值r
+	// 	alert(r);//！！！这里不正确，Ajax的异步导致Ajax还没执行完返回php的r值，总程序就先执行完了；
+	// 	           //！！要用同步技术--async可以设置同步还是异步，默认是异步，false是同步；
+	// 	if(r=='1' || val.length<6){//说明用户是存在的
+	// 		obj.next().show();//后面的红字显示出来
+	// 		obj.data({'s':0});//错误就是0-show
+	// 	}else{
+	// 		obj.next().hide();    //就把错误红字--隐藏
+	// 		obj.data({'s':1});//正确就是1-hide
+	// 	}
+	// });
+
+	//同步
+	$.ajax({
+		type:'get',
+		url:'get.php',
+		data:{'username':val},
+		async:false,//设置同步
+		success:function(r){//返回值----当他成功返回的时候
+			if(r=='1' || val.length<6){
+				obj.next().show();
+				obj.data({'s':0});
+			}else{
+				obj.next().hide();    //就把错误红字--隐藏
+				obj.data({'s':1});//正确就是1-hide
+			}
+		}
+	});
+	
+});
+
+$('.pass').blur(function(){//密码
+	val=this.value;
+	if(val.length<6){
+		$(this).next().show();//后面的红色字体-显示
+		$(this).data({'s':0});
+	}else{
+		$(this).next().hide();//后，煎的红色字体-隐藏
+		$(this).data({'s':1});
+	}
+});
+
+$('.repass').blur(function(){
+	val=this.value;
+	passval=$('.pass').val();   //passval是上一项.pass的值
+
+	if(val.length<6 || val!=passval){  //密码长度不够 or 两次密码不一致
+		$(this).next().show();
+		$(this).data({'s':0});
+	}else{
+		$(this).next().hide();
+		$(this).data({'s':1});
+	}
+});
+
+$('.email').blur(function(){//邮箱的格式
+	val=this.value;
+	if(val.match(/^\w+@\w+\.\w+$/i)){  //用正则表达式判断格式是否正确
+		$(this).next().hide();//匹配到了就没什么问题
+		$(this).data({'s':1});
+	}else{
+		$(this).next().show();
+		$(this).data({'s':0});
+	}
+});
+
+$('.phone').blur(function(){
+	val=this.value;
+	if(val.match(/^\d{11}$/i)){  //11位数字
+		$(this).next().hide();
+		$(this).data({'s':1})
+	}else{
+		$(this).next().show();
+		$(this).data({'s':0})
+	}
+});
+
+
+
+//表单验证
+$('.ok').click(function(){
+	$('.auth').blur();//用auth找到所有需要验证的人
+
+	tot=0;
+	$('.auth').each(function(){
+		tot+=$(this).data('s');
+	});
+	//收尾
+	if(tot==5){
+		$('form').submit();//表单提交；提交至go.php了；
+	}
+	
+});
+
+</script>
+</html>

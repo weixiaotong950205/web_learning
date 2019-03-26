@@ -14,16 +14,16 @@
 	<script src="jquery.min.js"></script>
 </head>
 <body>
-	sdvfdefvgbefrefre
+	echo "<tr></tr>"
 	
 </body>
 <script>//上面是服务器的php代码
 $('.del').click(function(){
 	id=$(this).attr('id');
-	obj=$(this);
+	obj=$(this);//此时this指的就是那个a连接
 	$.get('.del.php',{id:id},function(r){  //js与ajax两种通讯方式：post、get
-		if(r=='1'){
-			obj.parent().parent().hide(1000);
+		if(r=='1'){  //一旦接收到1，就隐藏那一行
+			obj.parent().parent().hide(1000);//此处不能用this,这里用this指的会是jquery对象本身；
 		}
 	});
 });

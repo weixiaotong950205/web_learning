@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+
+		.container{  /* 可视窗口 */
+			width: 1140px;
+			padding: 0px 15px;
+			margin: 0 auto;
+		}
+
+		.carousel{  
+			position: relative;
+		}
+
+		.window{   /* 眼前看到的窗口 */
+			height: 300px;
+			width: 1140px;
+			overflow: hidden; /* 超出则隐藏 */
+			position: relative;
+		}
+		.image_reel{   /* 里面放了4个div,是绝对定位 */
+			position: absolute;
+			top: 0; left: 0;
+		}
+		.image_reel img{
+			float: left;/* 都是左浮动 */
+		}
+
+		.paging{  /* 里面是1,2,3的小按钮 */
+			position: absolute;
+			width: 150px;
+			height: 50px;
+			bottom: 0px;
+			right: 0px;
+			z-index: 100;
+			text-align: center;
+			line-height::40px;
+			display: none;
+		}
+		.paging a{
+			padding: 0px 5px;
+			text-decoration: none;
+			color: #fff; 
+		}
+		.paging a.active{/* 右下角的小1,2,3有边框并且有圆角 */
+			font-weight: bold;
+			background: #920000;
+			border: 1px solid #610000;
+			border-radius: 3px;
+		}
+		.paging a:hover{  /* 当鼠标移上去，字体加粗 */
+			font-weight: bold;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="page-header">幻灯片效果</h1>
+
+		<div class="carousel">
+			<div class="window">  <!-- 眼前看到的窗口 -->
+				<div class="image_reel"><!-- 放四个图的大div -->
+					<a href="#"><img src="img1.jpg" alt="" /></a>
+					<a href="#"><img src="img2.jpg" alt="" /></a>
+					<a href="#"><img src="img3.jpg" alt="" /></a>
+					<a href="#"><img src="img4.jpg" alt="" /></a>
+				</div>
+			</div>
+			<div class="paging"> <!-- 里面是1,2，3的小按钮 --> 
+				<a href="javascript:" rel="1">1</a>
+				<a href="javascript:" rel="2">2</a>
+				<a href="javascript:" rel="3">3</a>
+			</div>
+
+		</div>
+
+	</div>
+	
+</body>
+<script>//效果：1.点击进入下一张;  2.如果不动，自己三五秒会自动放映下一张幻灯片  3.切换时图片是无缝衔接在一起的，像一大张长图片  由1->3,会快速的向右切换至第三幅图     //思路：一个大div(相对定位)-里面3个小div(绝对定位),用定位控制显示哪一个图----3个div捆绑成一个大div(overflow：hidden超出则隐藏),用来显示的div是相对,大div绝对定位；大div往左走---其实是1,2,3,1四个小div,刚到达后1的时候，有个jquery迅速的把后1换成前1 (四幅图循环转圈圈)
+//第一步
+$('.paging').show();
+$('.paging a:first').addClass('active');//按钮里面的第一个按钮1-激活状态
+
+imageWidth=$('.window').width();//窗口的宽度就是一个图片的宽度
+imageSum=$('.image_reel img').size();//图片的个数-4
+imageReelWidth=imageWidth * imageSum;//4倍窗口的宽度-里面有四幅图
+
+$('.image_reel').css({'width':imageReelWidth});
+//第二步
+rotate=function(end){//rotate谁往哪走多少-激活
+	if(end){//end=true
+		var triggerID=imageSum-1;
+		var image_reelPosition=triggerID * imageWidth;
+
+		$('.paging a').removeClass('active');
+		$active.addClass('active');
+		$('.image_reel').animate({
+			left:-image_reelPosition
+		});
+	}else{//end=false
+		var triggerID=$active.attr('rel')-1;
+		var image_reelPosition=triggerID * imageWidth;
+
+		$('.paging a').removeClass('active');
+		$active.addClass('active');
+
+		$('.image reel').animate({
+			left:-image_reelPosition
+		},500);
+	};
+
+rotateSwitch=function({   //rotateswitch一个个循环
+	play=setInterval(function(){
+		$active=$('.paging a.active').next();//第二个a链接
+		rel=$('.paging a.active').attr('rel');//取rel属性
+		document.title=rel;
+		if(rel==3){
+			$active=$('.paging a:first');
+			end=true;
+		}else{
+			end=false;
+		}
+		rotate(end);
+	},5000);//五秒钟一轮播
+};		
+rotateSwitch();
+//第三步
+$('.image_reel a').hover(function(){//当鼠标移到每一个幻灯片上面时不让他走，就把定时器去掉
+	clearInterval(play);
+},function(){
+	rotateSwitch();//鼠标移开的时候再启动rotateSwitch
+});
+
+$('.paging a').click(function(){//当鼠标点击a链接时，
+	$active=$(this);//$active就等于你点击的这个a链接
+	clearInterval(play);//把动画停掉
+	rotate();//rotate谁往哪走多少-激活
+	totateSwitch();//再启动原有的动画
+	return false;//阻止超链接的跳转
+});
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div id='div1' style='position: absolute;top:0px;left:0px'><!-- 将div绝对定位到50，50 -->
+		<img src="web.png" width='100px'>
+	</div>
+</body>
+<script>
+function drag(obj){   //drag拖动
+	obj.bind('mousedown',start);  //bind绑定事件-‘鼠标按下事件’，鼠标按下，执行函数start
+
+	function start(event){  //事件发生时，传递一个参数event
+		deltaX=event.clientX-obj.offset().left;//鼠标往上一放-获取XY轴坐标;offset()左上角的坐标；
+		deltaY=event.clientY-obj.offset().top;//！！就是获取点击点的坐标
+
+		$(document).bind('mousemove',move);//往整个文档上面绑定了mousedown事件
+		$(document).bind('mouseup',stop);
+		return false;//阻止默认行为的发生
+	}
+
+	function move(event){//鼠标点击，图片跟着鼠标走-move
+		obj.css({//给图片设置样式
+			"left":(event.clientX-deltaX)+"px",//计算移动到的点与初始点XY的差距，赋给obj
+			"top":(event.clientY-deltaY)+"px"
+		})
+		return false;//阻止默认行为的发生
+	}
+	function stop(){//鼠标放开-执行stop
+		$(document).unbind('mousemove',move);//将绑定的move、stop给解绑
+		$(document).unbind('mouseup',stop);
+		}
+	}
+	
+obj=$('#div1');//obj就是你拖动的那个放图片的div1 
+drag(obj);//把obj传进去
+</script>
+</html>
