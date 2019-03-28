@@ -12,7 +12,7 @@ Sublime相关问题：
  
 •添加注释：ctrl+/
 •如何开启Vim/emmet放入到sublime插件包内：安装相应的插件：shift+ctrl+p—install-输入相应的插件；
-![image]()
+![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/2.png) ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/3.png)
    
 •开启vi编辑器：Preferces-setting-user-‘ignored_packing’内的字符去掉；
 •打开文件发现变成了.dump格式且无法编辑，卸掉GBKSupport插件，安装ConvertToUTF8插件；
@@ -23,6 +23,7 @@ Sublime相关问题：
 
 
 •相关：
+![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/4.png)
  
 •HTML5：网站基本结构、页面标签；
  CSS3:包装装饰页面标签、网页样式；
@@ -47,6 +48,7 @@ BootStrap版本：3.3.7—商用：bootstrap.min.css;  学习：bootstrap.css
 (最受欢迎的HTML、CSS和JS框架，用于开发响应式布局，移动设备优先的web项目；)    视频课版本：3.3.5
 BootStrap是基于jquery写的，要将jquery库放入到BootStrap/bs/js文件内；
 程序要先加载BootStrap和jquery
+![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/5.png)
  
 BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 
