@@ -85,12 +85,12 @@
 	
 </body>
 <script>//效果：1.点击进入下一张;  2.如果不动，自己三五秒会自动放映下一张幻灯片  3.切换时图片是无缝衔接在一起的，像一大张长图片  由1->3,会快速的向右切换至第三幅图     //思路：一个大div(相对定位)-里面3个小div(绝对定位),用定位控制显示哪一个图----3个div捆绑成一个大div(overflow：hidden超出则隐藏),用来显示的div是相对,大div绝对定位；大div往左走---其实是1,2,3,1四个小div,刚到达后1的时候，有个jquery迅速的把后1换成前1 (四幅图循环转圈圈)
-//第一步
-$('.paging').show();
+//第一步 
+$('.paging').show();//paging放1,2,3按钮 
 $('.paging a:first').addClass('active');//按钮里面的第一个按钮1-激活状态
 
 imageWidth=$('.window').width();//窗口的宽度就是一个图片的宽度
-imageSum=$('.image_reel img').size();//图片的个数-4
+imageSum=$('.image_reel img').size();//image_reel--大div  图片的个数-4
 imageReelWidth=imageWidth * imageSum;//4倍窗口的宽度-里面有四幅图
 
 $('.image_reel').css({'width':imageReelWidth});
@@ -103,37 +103,39 @@ rotate=function(end){//rotate谁往哪走多少-激活
 		$('.paging a').removeClass('active');
 		$active.addClass('active');
 		$('.image_reel').animate({
-			left:-image_reelPosition
+			left:-image_reelPosition//当rel=3，往左走3幅图
+		},500,function(){
+			$(this).css({'left':'0px'});//大图的left突然瞬间变成0
 		});
 	}else{//end=false
-		var triggerID=$active.attr('rel')-1;
-		var image_reelPosition=triggerID * imageWidth;
+		var triggerID=$active.attr('rel')-1;//取到第二个a链接的rel；2-1=1
+		var image_reelPosition=triggerID * imageWidth;//1*100
 
-		$('.paging a').removeClass('active');
-		$active.addClass('active');
+		$('.paging a').removeClass('active');//a连接的背景全去了
+		$active.addClass('active');//再加上
 
-		$('.image reel').animate({
-			left:-image_reelPosition
+		$('.image reel').animate({//来个动画
+			left:-image_reelPosition//往左走-100
 		},500);
 	};
 
 rotateSwitch=function({   //rotateswitch一个个循环
 	play=setInterval(function(){
-		$active=$('.paging a.active').next();//第二个a链接
+		$active=$('.paging a.active').next();//找到激活的那个按钮，激活的那个人的下一个a链接(第二个按钮)
 		rel=$('.paging a.active').attr('rel');//取rel属性
 		document.title=rel;
 		if(rel==3){
-			$active=$('.paging a:first');
-			end=true;
+			$active=$('.paging a:first');//没有下一个了,就用第一个
+			end=true;//接着执行
 		}else{
-			end=false;
+			end=false;//还没有到达最后一张
 		}
 		rotate(end);
 	},5000);//五秒钟一轮播
 };		
-rotateSwitch();
+rotateSwitch();//一启动这个，定时器就开始定时
 //第三步
-$('.image_reel a').hover(function(){//当鼠标移到每一个幻灯片上面时不让他走，就把定时器去掉
+$('.image_reel a').hover(function(){//当鼠标移到每一个幻灯片上面时不让幻灯片走，就把定时器去掉
 	clearInterval(play);
 },function(){
 	rotateSwitch();//鼠标移开的时候再启动rotateSwitch
