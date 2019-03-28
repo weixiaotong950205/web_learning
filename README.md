@@ -33,6 +33,7 @@ Sublime相关问题：
 •表单：type=’radio’(圆圈里面一个点)单选
        type=’checkbox’(方块里面是对号)多选
 
+
 jQuery框架：视频课用1.11.3—自己用的1.12.4(升级版)
            商业：minified-压缩版；做研究：unminified-未压缩版；
 •Jquery核心：通过CSS选择符查询DOM文档取得元素的引用；抛开了getElementById()和getElementByTagName();
