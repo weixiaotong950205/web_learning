@@ -7,9 +7,12 @@ code of Self-learning Web-design
            PC website design, a project: mobile website development
 
 Sublime相关问题：
+
+![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/1.png)
  
 •添加注释：ctrl+/
 •如何开启Vim/emmet放入到sublime插件包内：安装相应的插件：shift+ctrl+p—install-输入相应的插件；
+![image]()
    
 •开启vi编辑器：Preferces-setting-user-‘ignored_packing’内的字符去掉；
 •打开文件发现变成了.dump格式且无法编辑，卸掉GBKSupport插件，安装ConvertToUTF8插件；
