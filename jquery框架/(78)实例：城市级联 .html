@@ -1,0 +1,69 @@
+<?php     <!-- 省、市、区的数据用Ajax从数据库里面来 -->
+$pdo=new PDO('mysql:host=localhost;dbname=myweb','root','');
+$pdo=exec('set names utf8');
+
+$sql="select * form s_provimce";
+$smt=$pdo->query($sql);
+$rows=$smt->fetchALL(PDO::FETCH_ASSOC);
+
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style>
+		*{
+			font-style: 微软雅黑;
+		}
+		select{
+			width: 150px;  /* 给下拉菜单框框定下宽度 */
+		}
+	</style>
+	<script src='jquery.min.js'></script>
+</head>
+<body> 
+	<h2>请选择收货地址：</h2>
+	<hr>
+	<form action="">
+		<p>
+			省：
+			<select name="" id="province"><!--  设置下拉菜单 -->
+				<option value="">--选择省份--</option>
+				<?php  <!--  将数组遍历，数据一条条取出来，放到下拉框里 -->
+					foreach($rows as $row){
+						echo "<option value="{$row['ProvinceID']}">{$row[$row['ProvinceName']]}</option>";
+					}
+				 ?>
+			</select> 
+
+			市：
+			<select name="" id="city"><!--  设置下拉菜单 -->
+				<option value="">--选择市--</option>
+			</select> 
+
+			区：
+			<select name="" id="district"><!--  设置下拉菜单 -->
+				<option value="">--选择区--</option>
+			</select> 
+		</p>
+	</form> 
+</body>
+<script>  //城市级联  Ajax会涉及到很多php/mysql数据库的东西；兼容性比较高;
+//省、市、区的数据用Ajax从数据库里面来
+//得到市
+$('#province').change(function(){  //选择框中一改变省份，就执行函数
+	pid=this.value;//pid--省份ID
+	$.get('getcity.php',{pid：pid},function(r){
+		$('#city').html(r);
+	});
+});
+//得到区
+$('#city').change(function(){  
+	cid=this.value;
+	$.get('getstrict.php',{cid：cid},function(r){
+		$('#district').html(r);
+	});
+});
+</script>
+</html>
