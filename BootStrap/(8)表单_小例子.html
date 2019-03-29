@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bs</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 15px;
+		}
+	</style>
+</head>
+<body>
+ 	<!--<div class="container">  自己的写法，不好看
+		<form action="">
+			<p>Email address</p>
+			<p><input type="text" name=""></p>
+			<p>Password</p>
+			<p><input type="text" name=""></p>
+			<p>File input</p>
+			<p><input type="file" name=""></p>  文件上传框
+			<p>Example block-level help text here.</p>
+			<p>
+				<input type="radio" name="">Check me out    radio单选框
+			</p>
+			<p>
+				<input type="submit" name="submit">
+			</p>
+
+		</form>
+	</div>  -->
+<!-- 手册的写法 -->
+	<div class="container">
+		<div class="row">  <!-- 行里面可以放12个列 -->
+			<div class="col-md-8"><!-- 左面放一个图 -->
+				<img src="holder.js/750x300" alt="">
+			</div>
+			<div class="col-md-4"> <!-- 右面放表单 -->
+				<form action="">
+					<div class="form-group"> <!-- 一组 -->
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">  <!-- 输入框能做到自适应 -->
+					</div>
+					<div class="form-group">
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+					<div class="form-group">
+					    <label for="exampleInputFile">File input</label>
+					    <input type="file" id="exampleInputFile">   <!-- 文件上传框 -->
+					    <p class="help-block">Example block-level help text here.</p>
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+						    <label>
+						      <input type="checkbox"> Check me out
+						    </label>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" value='确认' class="btn btn-primary">Submit</button>
+						<button type="submit" value='取消' class="btn btn-danger">Submit</button>
+					</div>	
+				</form>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+</html>
