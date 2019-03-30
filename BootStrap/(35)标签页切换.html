@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:">linux</a></li> <!-- 要写javascript: 否则，下面js点击随后被刷新，将看不到效果 -->
+			<li><a href="javascript:">php</a></li>
+			<li><a href="javascript:">html5</a></li>
+		</ul>	
+	</div>
+</body>
+<script>
+$('li').click(function(){
+	$(this).addClass('active');//点谁谁被激活
+	$('li').not($(this)).removeClass('active');//其他没被点击的，激活状态都去掉；
+});
+</script>
+</html>
