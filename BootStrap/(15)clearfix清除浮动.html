@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bs</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		.div1{/* 大盒子div */
+			background: #ccc;
+		}
+		.div2{  /* 三个小div把大的div给撑开了， 若是三个小div浮动了，大div就不见了,因为大div没有高 */
+			width: 100px;
+			height: 100px;
+			background: #f00;
+			float: left;
+		}
+		.div3{
+			width: 100px;
+			height: 100px;
+			background: #0f0;
+			float: left;
+		}
+		.div4{
+			width: 100px;
+			height: 100px;
+			background: #0ff;
+			float: left;
+		}
+		.clear{    /* 清除浮动*/
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="div1"><!-- 一个大div里面有三个小div -->
+			<div class="div2"></div>
+			<div class="div3"></div>
+			<div class="div4"></div>
+			<div class="clearfix"></div>  
+		</div>  
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bs</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		.div1{
+			height: 100px;
+			border: 2px solid #0ff;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="div1">
+			<div class="close">&times;</div>  <!-- close是关闭类，把x定位到右上角 ，&times就是一个x -->
+			<p>bs is very much!!</p>
+			<p>bs is very much!!</p>
+			<p>bs is very much!!</p>
+		</div>
+		
+	</div>
+</body>
+<script>
+$('.close').click(function(){
+	$(this).parent().slideUp();  //父标签就是.div
+});
+</script>
+</html>

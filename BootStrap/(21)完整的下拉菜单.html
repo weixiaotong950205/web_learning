@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bs</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		 <div class="dropdown">
+		 	<button class="btn btn-primary" data-toggle="dropdown">DropDown<span class="caret"></span></button>
+
+		 	<ul class="dropdown-menu">
+		 		<li class="dropdown-header"> 第一部分 </li>  <!-- 不可选的标题 -->
+		 		<li><a href="">linux技术</li>
+		 		<li><a href="">css技术</li>
+		 		<li><a href="">javascript技术</li>
+		 		<li class="divider"></li> <!-- divider分割线 -->
+		 		<li class="dropdown-header"> 第二部分 </li><!-- 不可选的标题 -->
+		 		<li><a href="">jquery技术</li>
+		 		<li class="disabled"><a href="">bootstrap技术</li>  <!-- class="disabled"禁用 -->
+		 		<li><a href="">php技术</li>
+		 	</ul>
+		 </div>
+	</div>
+</body>
+
+</html>
