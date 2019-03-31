@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<div class="progress"><!-- progress进度条效果 -->
+		  	<div class="progress-bar" style="width: 1%;"><!-- progress-bar里面的小进度条 -->
+		    <span class="sr-only">60% Complete</span>
+		  	</div>
+		</div>
+	</div>
+			
+</body>
+<script>//进度条效果：从1%走到100%
+s=0;
+v=5;
+sobj=setInterval(function(){
+	s+=v;
+	if(s>=100){
+		s=100;
+		clearInterval();
+	}
+	document.title=s;
+	$('.progress-bar').css({'width':s+'%'});
+},100);
+</script>
+</html>
