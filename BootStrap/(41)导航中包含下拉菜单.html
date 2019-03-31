@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		.show{
+			list-style: none;/* 将内容处前面的点去掉 */
+			padding: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="nav nav-tabs ">
+			<li class="active"><a href="javascript:">linux</a></li> 
+			<li "><a href="javascript:">php</a></li><!-- disabled禁用 -->
+			<li class="dropdown"> <!-- 加一个下拉菜单 -->
+				<a href="javascript:" data-toggle="dropdown">html5<span class="caret"></span></a><!-- 加一个三角按钮 --> <!-- 要给单击事件data-toggle="dropdown" -->
+				<ul class="dropdown-menu">
+					<li><a href="javascript:">js</a></li>
+					<li><a href="javascript:">jquery</a></li>
+					<li><a href="javascript:">bs</a></li>
+					<li><a href="javascript:">css</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="show">  
+			<li class="lead">linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! linux is very much! </li>
+			<li class="lead">php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! php is very much! </li>
+			<li class="lead">html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! html5 is very much! </li>
+		</ul>	
+	</div>
+</body>
+<script>
+$('.nav li').click(function(){
+	$('.nav li').removeClass('active');
+	$(this).addClass('active');
+
+	idx=$(this).index('.nav li');//点谁，出现谁的索引值->
+	$('.show li').hide();//先将所有都隐藏
+	$('.show li').eq(idx).show();//->找show li 里面对应的第几个li；   :eq() 选择器选取带有指定 index 值的元素
+});
+
+// //点击标题，显示相应的内容，其他的内容隐藏
+// $('.show li').hide(); //里面所有都隐藏
+// $('.show li').first().show();//show li 里面的第一个人显示
+</script>
+</html>
