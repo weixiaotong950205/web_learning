@@ -17,13 +17,24 @@
 <body> 
 	<div class="container">
 		<div class="progress"><!-- progress进度条效果 -->
-		  	<div class="progress-bar" style="width: 25%;"><!-- progress-bar里面的小进度条 -->
+		  	<div class="progress-bar" style="width: 1%;">1%<!-- progress-bar里面的小进度条 --><!-- 一开始设置为内容1% -->
 		  	</div>
 		</div>
 	</div>
 			
 </body>
 <script>
-
+s=0;
+v=2;
+sobj=setInterval(function(){
+	s+=v;
+	if(s>=100){
+		s=100;
+		clearInterval();
+	}
+	document.title=s;
+	$('.progress-bar').css({'width':s+'%'});
+	$('.progress-bar').html(s+'%');//将里面的内容添加为x%
+},100);
 </script>
 </html>
