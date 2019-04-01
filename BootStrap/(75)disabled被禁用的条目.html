@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<div class="row"><!-- 栅格系统 -->
+			<div class="col-md-3">
+				<div class="list-group">
+					<button class="list-group-item disabled">Linux</button><!-- disabled被禁用的条目 -->
+					<button class="list-group-item abc">Javascript</button>
+					<button class="list-group-item abc">HTML5</button>
+		
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="jumbotron">
+					<h1>Linux技术</h1>
+					<p>linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!linux is very good!</p>
+					<button class="btn btn-primary btn-lg">确认</button>
+					<button class="btn btn-danger btn-lg">取消</button>
+				</div>
+
+				<div class="jumbotron">
+					<h1>javascript技术</h1>
+					<p>javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!javascript is very good!</p>
+					<button class="btn btn-primary btn-lg">确认</button>
+					<button class="btn btn-danger btn-lg">取消</button>
+				</div>
+
+				<div class="jumbotron">
+					<h1>HTML5技术</h1>
+					<p>HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!HTML5 is very good!</p>
+					<button class="btn btn-primary btn-lg">确认</button>
+					<button class="btn btn-danger btn-lg">取消</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+			
+</body>
+<script>
+$('.jumbotron').hide().first().show();
+
+$('.list-group-item abc').mouseenter(function(){//找abc类,被禁用的不会被显示
+	idx=$(this).index('.list-group-item');
+	$('.list-group-item').removeClass('active');
+	$(this).addClass('active');
+
+	$('.jumbotron').hide();
+	$('.jumbotron').eq(idx).show();
+});
+
+
+
+</script>
+</html>

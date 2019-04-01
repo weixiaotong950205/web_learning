@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<div class="list-group">
+			<a href="#" class="list-group-item active">
+			    <h4>Linux技术</h4>
+			    <p>Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!</p>
+			</a>
+		</div>
+
+		<div class="list-group">
+			<a href="#" class="list-group-item">
+			    <h4>Linux技术</h4>
+			    <p>Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!</p>
+			</a>
+		</div>
+
+		<div class="list-group">
+			<a href="#" class="list-group-item">
+			    <h4>Linux技术</h4>
+			    <p>Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!</p>
+			</a>
+		</div>
+		<div class="list-group">
+			<a href="#" class="list-group-item">
+			    <h4>Linux技术</h4>
+			    <p>Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!</p>
+			</a>
+		</div>
+
+		<div class="list-group">
+			<a href="#" class="list-group-item">
+			    <h4>Linux技术</h4>
+			    <p>Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!Linux is very good!</p>
+			</a>
+		</div>
+
+	</div>
+			
+</body>
+<script>//鼠标移到谁身上，谁就被激活
+$('.list-group-item').mouseenter(function(){
+	$('.list-group-item').removeClass('active');
+	$(this).addClass('active');
+})
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h4 class="panel-title"><a href="javascript:" class="show">Linux技术</a></h4>
+			</div>
+			<div class="panel-body">
+		    	<p>Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!</p>
+			</div>
+		</div>
+
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h4><a href="javascript:" class="show">Linux技术</a></h4>
+				</div>
+			</div>
+			<div class="panel-body">
+		    	<p>Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!</p>
+			</div>
+		</div>
+
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h4><a href="javascript:" class="show">Linux技术</a></h4>
+				</div>
+			</div>
+			<div class="panel-body">
+		    	<p>Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!</p>
+			</div>
+		</div>
+
+	</div>
+			
+</body>
+<script>//鼠标点击到谁，谁的内容就被打开，别的内容都被收起
+$('.panel-body').hide();
+
+$('.show').click(function(){
+	$('.panel-body').hide();
+	$(this).parent().parent().parent().next().slideDown();//.show-<a>->h4->panel-title->panel-heading的下一个
+})
+</script>
+</html>
