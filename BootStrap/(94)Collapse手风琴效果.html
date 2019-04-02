@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		.container{
+			margin-top: 10px;
+			padding: 10px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container"><!-- Collapse手风琴效果：点击题目，只展开相应的内容 -->
+		<div class="panel-group" id="mypanel"><!-- 父id-mypanel -->
+		  	<div class="panel panel-info">
+		    	<div class="panel-heading">
+		      		<div class="panel-title"><a href="#one" data-toggle="collapse" data-parent="#mypanel">Linux技术</a></div><!-- 通过这个子id-one获得联系 --><!-- 父id-mypanel --><!-- data-toggle="collapse"点击就折叠 -->
+		    	</div>
+		    	<div id="one" class="panel-collapse collapse in"><!-- 子id-one --><!-- 子id-one --><!-- class="panel-collapse collapse in"刚进来内容就是打开状态 -->
+			      	<div class="panel-body">
+			        	linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!linux is very much!!
+			      	</div>
+		    	</div>
+			</div>
+
+		  	<div class="panel panel-warning">
+		    	<div class="panel-heading">
+		      		<div class="panel-title"><a href="#two" data-toggle="collapse" data-parent="#mypanel">js技术</a></div><!-- 子id-two -->
+		    	</div>
+		    	<div id="two" class="panel-collapse collapse">
+			      	<div class="panel-body">
+			        	js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!js is very much!!
+			      	</div>
+		    	</div>
+			</div>
+
+		  	<div class="panel panel-danger">
+		    	<div class="panel-heading">
+		      		<div class="panel-title"><a href="#three" data-toggle="collapse" data-parent="#mypanel">bs技术</a></div><!-- 子id-three -->
+		    	</div>
+		    	<div id="three" class="panel-collapse collapse"><!-- 让他进来状态不是打开的，去掉in -->
+			      	<div class="panel-body">
+			        	bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!bs is very much!!
+			      	</div>
+		    	</div>
+			</div>
+	</div>
+
+			
+</body>
+<script>//手动初始化！！要不然达不到要的效果
+$(function(){
+  $('[data-toggle="collapse"]').collapse()
+})
+</script>
+</html>

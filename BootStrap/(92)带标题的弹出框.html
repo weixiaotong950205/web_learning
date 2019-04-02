@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		.container{
+			margin-top: 10px;
+			padding: 300px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container"><!-- popover弹出框 -->
+		<button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+		  	Popover on 左侧
+		</button>
+
+		<button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" title="Hello World!!" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><!-- title="Hello World!!"可以加标题 -->
+		  		Popover on 顶部
+		</button>
+
+		<button type="button" class="btn btn-warning" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+		sagittis lacus vel augue laoreet rutrum faucibus.">
+		  	Popover on 底部
+		</button>
+
+		<button type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+		  	Popover on 右侧
+		</button>
+		
+	</div>
+
+			
+</body>
+<script>
+$(function(){
+  $('[data-toggle="popover"]').popover()
+})
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<div class="dropdown">
+			<button class="btn btn-primary btn-lg dropdown-toggle" >Learn More<span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="javascript:">linux</a></li>
+				<li><a href="javascript:">php</a></li>
+				<li class="divider"><a href="javascript:"></a></li>
+				<li><a href="javascript:">js</a></li>
+				<li><a href="javascript:">HTML5</a></li>
+			</ul>
+		</div>
+		
+	</div>
+
+			
+</body>
+<script>
+i=0;
+$('.dropdown-toggle').click(function(){
+	if(i%2==0){
+		$('body').css({'backgroud':'#aff'});//打开之前先让背景变成紫色
+		$('.dropdown-menu').show();
+	}else{
+		$('.dropdown-menu').hide();
+		$('body').css({'backgroud':'#fff'});//打开之后让背景变回白色
+	}
+	i++;//别让了让i++
+});
+
+
+</script>
+</html>

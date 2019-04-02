@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">Launch demo modal</button>
+		<div class="modal fade" id="mymodal"> 
+			<div class="modal-dialog">
+			    <div class="modal-content">
+			      	<div class="modal-header">
+			        	<h4 class="modal-title">查看用户</h4>
+			        	<div class="close" data-dismiss="modal">&times;</div>
+			     	</div>
+			        <div class="modal-body">
+			        	<table class="table table-borderd table-striped table-hover">
+			        		<tr>
+			        			<th>编号</th>
+			        			<th>用户名</th>
+			        			<th>密码</th>
+			        		</tr>
+			        		<tr>
+			        			<th>1</th>
+			        			<th>user1</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>2</th>
+			        			<th>user2</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>3</th>
+			        			<th>user3</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>4</th>
+			        			<th>user4</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>5</th>
+			        			<th>user5</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>6</th>
+			        			<th>user6</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>7</th>
+			        			<th>user7</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>8</th>
+			        			<th>user8</th>
+			        			<th>123</th>
+			        		</tr>
+			        	
+			        	</table>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button class="btn btn-danger cancel">取消</button>
+			        	<button class="btn btn-primary save">保存</button>
+			      	</div>
+			    </div>
+			</div>
+		</div>
+
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">Launch demo modal222</button>
+		<div class="modal fade" id="mymodal"> 
+			<div class="modal-dialog modal-lg"><!-- modal-dialog modal-lg尺寸设置成大的 -->
+			    <div class="modal-content">
+			      	<div class="modal-header">
+			        	<h4 class="modal-title">查看商品</h4>
+			        	<div class="close" data-dismiss="modal">&times;</div>
+			     	</div>
+			        <div class="modal-body">
+			        	<table class="table table-borderd table-striped table-hover">
+			        		<tr>
+			        			<th>编号</th>
+			        			<th>用户名</th>
+			        			<th>密码</th>
+			        		</tr>
+			        		<tr>
+			        			<th>1</th>
+			        			<th>user1</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>2</th>
+			        			<th>user2</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>3</th>
+			        			<th>user3</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>4</th>
+			        			<th>user4</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>5</th>
+			        			<th>user5</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>6</th>
+			        			<th>user6</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>7</th>
+			        			<th>user7</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>8</th>
+			        			<th>user8</th>
+			        			<th>123</th>
+			        		</tr>
+			        	
+			        	</table>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button class="btn btn-danger cancel">取消</button>
+			        	<button class="btn btn-primary save">保存</button>
+			      	</div>
+			    </div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+			
+</body>
+<script>
+$('.save').click(function(){
+	alert('保存成功！');
+	$('#mymodal').modal('hide');
+});
+
+$('.cancel').click(function(){
+	$('#mymodal').modal('hide');
+});
+
+
+</script>
+</html>

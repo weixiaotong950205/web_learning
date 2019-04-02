@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		.container{
+			margin-top: 100px;
+			padding: 50px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<div class="tooltip-demo"><!-- 要包含在class="tooltip-demo"这个类里面/这里包不包都行的 -->
+			<button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button><!-- data-toggle鼠标往上一划，会弹出个东西来 --><!-- data-placement="left"鼠标往上一划，左边出来个东西 --><!-- title划出来的内容标题 -->
+
+			<button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+			<button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+			<button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+		</div>
+		
+	</div>
+
+			
+</body>
+<script>
+$(function(){//必须先初始化页面，否则达不到在上下左右的效果
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+</script>
+</html>

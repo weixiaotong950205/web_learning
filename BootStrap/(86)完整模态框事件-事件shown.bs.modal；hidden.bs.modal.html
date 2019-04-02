@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		.container{
+			margin-top: 20px;
+		}
+		
+	</style>
+</head>
+<body> 
+	<div class="container">
+		<!-- 模态框 -->
+		<div class="modal fade" id="mymodal"> 
+			<div class="modal-dialog">
+			    <div class="modal-content">
+			      	<div class="modal-header">
+			        	<h4 class="modal-title">查看用户</h4>
+			     	</div>
+			        <div class="modal-body">
+			        	<table class="table table-borderd table-striped table-hover">
+			        		<tr>
+			        			<th>编号</th>
+			        			<th>用户名</th>
+			        			<th>密码</th>
+			        		</tr>
+			        		<tr>
+			        			<th>1</th>
+			        			<th>user1</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>2</th>
+			        			<th>user2</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>3</th>
+			        			<th>user3</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>4</th>
+			        			<th>user4</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>5</th>
+			        			<th>user5</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>6</th>
+			        			<th>user6</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>7</th>
+			        			<th>user7</th>
+			        			<th>123</th>
+			        		</tr>
+			        		<tr>
+			        			<th>8</th>
+			        			<th>user8</th>
+			        			<th>123</th>
+			        		</tr>
+			        	
+			        	</table>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button class="btn btn-danger cancel shut">关闭</button>
+			      	</div>
+			    </div>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<button class="btn btn-primary btn-lg open">打开</button>
+		</div>
+	</div>
+
+			
+</body>
+<script>//事件shown.bs.modal；hidden.bs.modal
+$('#mymodal').on('shown.bs.modal',function(){//shown.bs.modal在打开的一瞬间
+	$('#mymodal').css({'background':'#aaf'});//在打开的一瞬间，背景变为浅紫色
+})
+
+$('#mymodal').on('hidden.bs.modal',function(){//hidden.bs.modal在关闭的一瞬间
+	$('#mymodal').css({'background':'#fff'});//在关闭的一瞬间，背景变为白色
+})
+
+$('.open').click(function(){
+	$('#mymodal').modal('show');
+});
+$('.shut').click(function(){
+	$('#mymodal').modal('hide');
+});
+
+</script>
+</html>
