@@ -51,6 +51,7 @@ BootStrap是基于jquery写的，要将jquery库放入到BootStrap/bs/js文件�
 ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/5.png)
  
 BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
+
 •工具提示tooltip，要有初始化的过程，否则达不到提示框在上下左右的效果；
     $(function(){$('[data-toggle="tooltip"]').tooltip()})
 
