@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"> 
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script> 
+	<script src="bs/js/holder.min.js"></script>
+	<style> 
+		*{
+			font-family: 微软雅黑;
+		}
+		.container{
+			margin-top: 20px!important;
+			position: relative;
+		    margin: 0 auto;/* 使页面居中 */
+
+		}
+		.nav{
+			height: 15px;/* 图片之间分割线 */
+		}
+		
+		.leftnav{/* 左侧导航条 */
+			position: fixed;/* 设置成固定定位 */
+			width: 60px;
+			height: 300px;/* 六层图片分担300px,一层是50px */
+			background: #272822;
+			top: 50%;
+			margin-top: -150px;/* 使他固定居中 */
+			left: 25px;
+			
+		}
+		.leftnav div{ /* 总体给个样式 */
+			text-align: center;
+			line-height: 50px;
+		}
+		.level{
+			height: 50px;/* 每一层50px，一共是300px */
+			background: #272822;
+			color: #fff;
+			border-bottom: 1px solid #fff;/* 每个小块下面加个小线条 */
+		}
+		
+
+	</style>
+</head>
+<body> 
+	<!-- 左侧导航 -->
+	<div class="leftnav">
+		<div class="level">奶制品</div>
+		<div class="level">休闲零食</div>
+		<div class="level">饼干糖巧</div>
+		<div class="level">酒水饮料</div>
+		<div class="level">米面杂粮</div>
+		<div class="level">美容护肤</div>
+	</div>
+
+
+	<div class="container">
+	<!-- 从BootStarp中文文档拽过来了一个上方导航条 -->
+		<nav class="navbar navbar-inverse"><!-- inverse反色 -->
+		  	<div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			      	</button>
+			      	<a class="navbar-brand" href="#">买买买</a><!-- 这里改动名称 -->
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav"><!-- 这里设置六个大块-可以用来滚动 -->
+				        <li class="active"><a href="#">奶制品<span class="sr-only">(current)</span></a></li>
+				        <li><a href="#">休闲零食</a></li> 
+				        <li><a href="#">饼干糖巧</a></li>
+				        <li><a href="#">酒水饮料</a></li>
+				        <li><a href="#">米面杂粮</a></li>
+				        <li><a href="#">美容护肤</a></li>
+			      	</ul>
+				    
+				    <ul class="nav navbar-nav navbar-right">
+				        <li class="dropdown">
+				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">设置<span class="caret"></span></a>
+				          	<ul class="dropdown-menu">
+					            <li><a href="#">切换用户</a></li>
+					            <li><a href="#">收货地址</a></li>
+					            <li><a href="#">已选商品</a></li>
+					            <li role="separator" class="divider"></li>
+					            <li><a href="#">退出登录</a></li>
+				          	</ul>
+				        </li>
+				    </ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- 放图片 -->
+		<div class="header">
+			<img src="9.jpg">
+		</div>
+
+		<div class="nav"></div><!-- 分割线 -->
+
+		<div class="floor">
+			<img src="1.png" width="1140px">
+		</div>
+
+		<div class="nav"></div> <!-- 图片之间增加个-分割线 -->
+
+		<div class="floor">
+			<img src="2.png" width="1140px">
+		</div>
+
+		<div class="nav"></div>
+
+		<div class="floor">
+			<img src="3.png" width="1140px">
+		</div>
+
+		<div class="nav"></div>
+
+		<div class="floor">
+			<img src="4.png" width="1140px">
+		</div>
+
+		<div class="nav"></div>
+
+		<div class="floor">
+			<img src="5.png" width="1140px">
+		</div>
+
+		<div class="nav"></div>
+
+		<div class="floor">
+			<img src="6.png" width="1140px">
+		</div>
+
+		<div class="nav"></div>
+
+		<div class="footer">
+			<img src="10.jpg">
+		</div>
+		
+		<div class="nav"></div>
+
+		<div class="footer">
+			<img src="10.jpg">
+		</div>
+
+		<!-- 从上面拷贝了一份放这 -->
+		<nav class="navbar navbar-inverse">
+		  	<div class="container-fluid">
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav">
+				        <li class="active"><a href="#">关于我们 <span class="sr-only">(current)</span></a></li><!-- 修改下面第一块的文字 -->
+				        <li class="active"><a href="#">联系我们</a></li>
+				        <li class="active"><a href="#">监管部门</a></li>
+				        <li class="active"><a href="#">售后服务</a></li>
+				        <li class="active"><a href="#">小圆圆</a></li>
+				        <li class="active"><a href="#">小阳阳</a></li>
+				    </ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+
+	</div>
+
+			
+</body>
+<script>//这个不具备响应式设计
+$('.level').first().css({'background':'#888'});//第一个块给点颜色
+
+$(window).scroll(function(){//当窗口发生滚动的时候
+	st=$(window).scrollTop();//已滚动的高
+
+	arr=[];
+	$('.floor').each(function(i){//这里有i
+		arr[i]=$(this).offset().top;//知道每一层距离顶部的高,i从0开始；注意top没有加括号，不是top();第一层-92；第二层-668;1247;1826;2406;2982;
+		});
+	for(j=0;j<arr.length;j++){//遍历每一层
+		if(st>=arr[j]){
+			document.title=j;//每一次超过一层，都把层号赋给标题
+			f=j;//到达的层号-赋给f
+		}else{
+			break;
+		}
+	}
+	$('.level').css({'background':'#272822'});//滑动的时候，先把所有北京变黑
+	$('.level').eq(f).css({'background':'#888'});//到达哪一层，对应的左侧框框变灰
+});
+
+
+
+</script>
+</html>
