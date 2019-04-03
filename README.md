@@ -54,4 +54,5 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 
 •工具提示tooltip，要有初始化的过程，否则达不到提示框在上下左右的效果；
     $(function(){$('[data-toggle="tooltip"]').tooltip()})
+    
 •部分替换：ctrl+h  选中‘in selection’按钮；再替换内容即可
