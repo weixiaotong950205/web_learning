@@ -10,31 +10,54 @@
 	<style> 
 		.container{
 			margin-top: 10px;
-			padding: 10px;
 		}
-		
+		.carousel-caption{
+			width: 100%;
+			height: 100px;
+			background: #272822;
+			position: absolute;/* 定位在左下角 */
+			left: 0px!important;
+			bottom: 0px!important;
+			text-align: left!important;/* 文字左对齐 */
+			padding-top: 0px!important;/* 这个框自身就带了20px的padding */
+			padding-left: 15px;
+			opacity: 0.7;/* 透明度 */
+		}
 	</style>
 </head>
 <body> 
 	<div class="container"><!-- Carousel幻灯片效果：三个图，三个指示灯，左右箭头-->
  		<div id="myppt" class="carousel slide" data-ride="carousel"><!-- 父id-myppt --><!-- data-ride="carousel"在页面加载时就开始动画播放 -->
+
 		  	<!-- 指示灯 -->
-		  		<ol class="carousel-indicators">
-		    		<li data-target="#myppt" data-slide-to="0" class="active"></li><!-- data-target="#myppt"找到父id --><!-- 控制轮播图下面的小点的跳转位置 -->
+<!-- 		  		<ol class="carousel-indicators">
+		    		<li data-target="#myppt" data-slide-to="0" class="active"></li>
 				    <li data-target="#myppt" data-slide-to="1"></li>
 				    <li data-target="#myppt" data-slide-to="2"></li>
-				</ol>
+				</ol> -->
 
 			<!-- 图 -->
 				<div class="carousel-inner">
 				    <div class="item active"><!-- 默认第一幅图是激活的 -->
 				      	<img src="img01.jpg" alt="">
+				      	<div class="carousel-caption"><!-- class="carousel-caption"提示说明-幻灯片下面的说明性文字 -->
+						    <h3>Linux is very much!!</h3>
+						    <p>Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!Linux is very much!!</p>
+						</div>
 				    </div>
 				    <div class="item">
 				      	<img src="img02.jpg" alt="">
+				      	<div class="carousel-caption">
+						    <h3>php is very much!!</h3>
+						    <p>php is very much!!php is very much!!php is very much!! is very much!!php is very much!!</p>
+						</div>
 				    </div>
 				    <div class="item">
 				      	<img src="img03.jpg" alt="">
+				      	<div class="carousel-caption">
+						    <h3>html5 is very much!!</h3>
+						    <p>html5 is very much!!html5 is very much!!html5 is very much!!html5 is very much!!html5 is very much!!</p>
+						</div>
 				    </div>
 				</div>
 
