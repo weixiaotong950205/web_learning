@@ -56,3 +56,13 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
     $(function(){$('[data-toggle="tooltip"]').tooltip()})
     
 •部分替换：ctrl+h  选中‘in selection’按钮；再替换内容即可
+
+
+响应式网站设计：（简单的栈，适用于不同设备的屏幕）
+
+   学习大纲：1）media query技术
+            2）响应式网站设计实例
+            3）bs结合响应式网站设计完成小动漫项目
+       
+•
+
