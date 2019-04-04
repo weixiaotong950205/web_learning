@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PC站</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="bs/js/holder.min.js"></script>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		.main{
+			width: 1300px;/* 网站的总宽度,这样下面四个就不用再写宽度了,是父main的100% */
+			margin: 0 auto;
+		}
+		.top{
+			 height: 100px;
+			 background: #272822;
+			 color: #fff;
+			 line-height: 100px;/* 控制行与行之间垂直距离 */
+			 text-align: center;/* 左右居中 */
+			 font-size: 50px;
+			 font-weight: bold;
+		
+		}
+		.left{
+			 height: 400px;
+			 background: #272822;
+			 color: #fff;
+			 line-height: 400px;
+			 text-align: center;
+			 font-size: 50px;
+			 font-weight: bold;
+			 width: 642px;/* 放在左边 *//* (总宽1300-15padding)/2 */
+			 float: left;/* 他浮动，右边的块才能在右边 */
+			 
+		}
+		.right{
+			 height: 400px;
+			 background: #272822;
+			 color: #fff;
+			 line-height: 400px;
+			 text-align: center;
+			 font-size: 50px;
+			 font-weight: bold;
+			 width: 642px;
+			 float: right;
+			 
+		}
+		.bottom{
+			 height: 100px;
+			 background: #272822;
+			 color: #fff;
+			 line-height: 100px;
+			 text-align: center;
+			 font-size: 50px;
+			 font-weight: bold;
+			 
+		}
+		.nav{
+			height: 15px;
+			clear: both;/* 清除浮动 */
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="top">1</div>
+		<div class="nav"></div>
+		<div class="left">2</div>
+		<div class="right">3</div>
+		<div class="nav"></div>
+		<div class="bottom">4</div>
+	</div>
+	
+</body>
+<script>
+	
+</script>
+</html>
