@@ -1,0 +1,25 @@
+.main{
+	width: 95%;	
+}
+.top{
+	background: #faa;
+}
+.bottom{
+	background: #faa;
+}
+.left{
+	float: none;/* 取消浮动 */
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	margin-bottom: 15px;
+	background: #faa;
+}
+
+.right{
+	float: none;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	background: #faa;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"><!-- 这样就可以识别手机的宽度了而不是识别分辨率；viewport当前浏览器视口;屏幕的宽度==手机的宽度；initial-scale=1初始化的比例是一倍 -->
+	<title>PC站</title>
+
+	<!-- PC屏幕 --><!-- 这些都放到了外部，看外部文件；pc.css；mobile.css；ipad.css -->
+	<link rel="stylesheet" href="pc.css">
+
+	<!-- 手机屏幕 -->
+	<link rel="stylesheet" media="(max-width: 760px)" href="mobile.css"><!-- media query文件---CSS文件放在外部 -->
+
+	<!-- ipad屏幕 -->
+	<link rel="stylesheet" media="(min-width: 768px) and (max-width: 1200px)" href="ipad.css">
+</head>
+<body>
+	<div class="main">
+		<div class="top">1</div>
+		<div class="nav"></div>
+		<div class="left">2</div>
+		<div class="right">3</div>
+		<div class="nav"></div>
+		<div class="bottom">4</div>
+	</div>
+	
+</body>
+<script>
+	
+</script>
+</html>

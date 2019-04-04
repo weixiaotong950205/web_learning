@@ -1,0 +1,29 @@
+.main{
+	width: 95%;
+	
+}
+
+.top{
+	background: #aaf;
+}
+.left{
+	float: none;/* 取消浮动 */
+	width: 100%;
+	height: 200px;
+	line-height: 200px;
+	margin-bottom: 15px;
+	background: #aaf;
+}
+
+.right{
+	float: none;
+	width: 100%;
+	height: 200px;
+	line-height:200px;
+	background: #aaf;
+}
+.bottom{
+	background: #aaf;
+}
+
+		

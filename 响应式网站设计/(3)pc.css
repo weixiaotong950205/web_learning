@@ -1,0 +1,57 @@
+*{
+	font-family: 微软雅黑;
+	margin: 0px;
+	padding: 0px;
+}
+.main{
+	width: 1300px;/* 网站的总宽度,这样下面四个就不用再写宽度了,是父main的100% */
+	margin: 0 auto;
+}
+.top{
+	 height: 100px;
+	 background: #272822;
+	 color: #fff;
+	 line-height: 100px;/* 控制行与行之间垂直距离 */
+	 text-align: center;/* 左右居中 */
+	 font-size: 50px;
+	 font-weight: bold;
+
+}
+.left{
+	 height: 400px;
+	 background: #272822;
+	 color: #fff;
+	 line-height: 400px;
+	 text-align: center;
+	 font-size: 50px;
+	 font-weight: bold;
+	 width: 642px;
+	 float: left;
+	 
+}
+.right{
+	 height: 400px;
+	 background: #272822;
+	 color: #fff;
+	 line-height: 400px;
+	 text-align: center;
+	 font-size: 50px;
+	 font-weight: bold;
+	 width: 642px;
+	 float: right;
+	 
+}
+.bottom{
+	 height: 100px;
+	 background: #272822;
+	 color: #fff;
+	 line-height: 100px;
+	 text-align: center;
+	 font-size: 50px;
+	 font-weight: bold;
+	 
+}
+.nav{
+	height: 15px;
+	clear: both;/* 清除浮动 */
+}
