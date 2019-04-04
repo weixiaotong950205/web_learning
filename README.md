@@ -6,7 +6,7 @@ code of Self-learning Web-design
            integrated framework-BootStrap(HTML5+CSS3+js),Node.js;Angular.js; 
            PC website design, a project: mobile website development
 
-Sublime相关问题：
+★Sublime相关问题：
 
 ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/1.png)
  
@@ -22,10 +22,10 @@ Sublime相关问题：
 •输入注册码：help-Enter license 
 
 
-•相关：
+相关：
 ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/4.png)
  
-•HTML5：网站基本结构、页面标签；
+★HTML5：网站基本结构、页面标签；
  CSS3:包装装饰页面标签、网页样式；
  Js:特效开发(动态)
 •<p>自动换行
@@ -38,13 +38,13 @@ Sublime相关问题：
        type=’checkbox’(方块里面是对号)多选
 
 
-jQuery框架：视频课用1.11.3—自己用的1.12.4(升级版)
+★jQuery框架：视频课用1.11.3—自己用的1.12.4(升级版)
            商业：minified-压缩版；做研究：unminified-未压缩版；
 •Jquery核心：通过CSS选择符查询DOM文档取得元素的引用；抛开了getElementById()和getElementByTagName();
 •jquery学习大纲：1.核心函数；2.选择器：基础选择器、基本选择器、属性选择器、子元素选择器；3.筛选：过滤、查找、串联；4.属性；5.文档处理：内部插入、外部插入、复制、包裹；6.CSS；7.事件：页面插入、事件处理、事件切换、事件委派、事件类型；8.效果：基本、滑入、淡入淡出、自定义动画；9.Ajax；10.工具；11.四个扩展实例；表单验证、城市级联、拖动图片、轮播图(幻灯片放映)
 
 
-BootStrap版本：3.3.7—商用：bootstrap.min.css;  学习：bootstrap.css
+★BootStrap版本：3.3.7—商用：bootstrap.min.css;  学习：bootstrap.css
 (最受欢迎的HTML、CSS和JS框架，用于开发响应式布局，移动设备优先的web项目；)    视频课版本：3.3.5
 BootStrap是基于jquery写的，要将jquery库放入到BootStrap/bs/js文件内；
 程序要先加载BootStrap和jquery
@@ -58,9 +58,8 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 •部分替换：ctrl+h  选中‘in selection’按钮；再替换内容即可
 
 
-响应式网站设计：（简单的栈，适用于不同设备的屏幕）
-
-   学习大纲：1）media query技术
+★响应式网站设计：（简单的栈，适用于不同设备的屏幕）
+   •学习大纲：1）media query技术
             2）响应式网站设计实例
             3）bs结合响应式网站设计完成小动漫项目
        
