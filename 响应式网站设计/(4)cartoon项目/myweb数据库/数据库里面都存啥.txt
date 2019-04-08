@@ -1,0 +1,4 @@
+数据库：
+
+中间的主体部分:panel panel-heading + panel-body + panel-footer
+      包括：ID(INT)、动漫的标题title(VARCHAR)、图片img(VARCHAR)、文字info(TEXT)、发布者auther(VARCHAR)、发布时间time(INT)；
