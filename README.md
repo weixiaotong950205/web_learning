@@ -83,3 +83,5 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 
 ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/20190404174337.png)
 
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 响应式设计-移动设备优先~~不要识别手机的分辨率，而识别手机的宽度； -->
+
