@@ -89,8 +89,13 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 
 
 ★Nodejs前端框架（实际是后端语言）
+
 ★官方手册：nodejs.org
+
 •版本：视频课：node-v6.9.1 LTS-x86;自用：10.15.3 LTS(稳定版本);
+
   测试下环境：windows+r---cmd---node -v  --> v10.15.3;  npm -v  --> 6.4.1;  交互式环境；
+  
   输出用console.log()
+  
   还是用sublime编译器；
