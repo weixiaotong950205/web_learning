@@ -105,8 +105,8 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 •nodejs---用sublime编译nodejs时出现乱码/no build system:   编译nodejs---ctrl+b
 
  解决方案：乱码：打开文件“Nodejs.sublime-build”，将代码 "encoding": "cp1252" 改为 "encoding": "utf8" ，将代码 "cmd": ["taskkill /F /IM node.exe & node", "$file"] 改为 "cmd": ["node", "$file"] ，保存文件；
-         no build system:  "node_command": "D:\\node.exe",
-                           "npm_command":"D:\\npm.cmd",   填写正确的路径；并且这俩重要文件要放在sublime>packages>user>下面才可以
+         no build system解决方法: 打开文件“Nodejs.sublime-settings”， 修改"node_command": "D:\\node.exe",
+                           "npm_command":"D:\\npm.cmd",    填写正确的路径；并且这俩重要文件要放在sublime>packages>user>下面才可以
  
  ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/nodejs%E7%BC%96%E8%AF%91.png)
  
