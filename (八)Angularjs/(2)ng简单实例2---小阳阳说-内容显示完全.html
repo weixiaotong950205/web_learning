@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app=""><!-- 要为ng加上作用域才有效 -->  <!-- 所有的界面都用bs来铺 -->
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<form action="">
+			<div class="form-group">
+				<label>请留言：</label>
+				<input type="text" class="form-control" ng-model="mess"><!-- 空白的输入框 --><!-- ng-model="mess"数据来源 -->
+			
+			</div>
+			<div class="well">小阳阳：{{mess}}</div><!-- 要将空白输入框内写的东西，放置到下面灰色框内，ng-model="mess" ; 没有了 ng-bind="mess"; 小阳阳说：{{mess}} 不可缺少 -->
+		</form>
+	</div>
+</body>
+<script>
+	
+</script>
+</html>
