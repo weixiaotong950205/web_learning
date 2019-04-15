@@ -115,7 +115,7 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
  
 
 
-★Angularjs教程：
+★Angularjs(ng)教程：视频课版本：1.4.6；自学版本：1.7.8版本；要运用bs铺界面，angularjs主要作用是MVC，动画相关的不用ng，用jQuery;
 
 •学习文档网站：http://www.runoob.com/angularjs/angularjs-tutorial.html
 
