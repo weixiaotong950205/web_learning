@@ -113,3 +113,10 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 •sublime中路径跟踪dos插件：
   sublime_terminal-master插件，就可以按住ctrl+shift+T可以在终端运行
  
+
+
+★Angularjs教程：
+
+学习文档网站：http://www.runoob.com/angularjs/angularjs-tutorial.html
+
+angularjs各版本的下载网站：https://code.angularjs.org/
