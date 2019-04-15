@@ -117,6 +117,13 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 
 ★Angularjs教程：
 
-学习文档网站：http://www.runoob.com/angularjs/angularjs-tutorial.html
+•学习文档网站：http://www.runoob.com/angularjs/angularjs-tutorial.html
 
-angularjs各版本的下载网站：https://code.angularjs.org/
+•angularjs各版本的下载网站：https://code.angularjs.org/
+
+•Angularjs学习大纲：
+
+![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/angularjs%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B21.png)
+
+![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/angularjs%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B22.png)
+
