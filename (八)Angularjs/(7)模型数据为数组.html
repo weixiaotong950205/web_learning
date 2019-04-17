@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl" >
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<form action="">
+			<div class="form-group">
+				<label>第一个值：</label>
+				<input type="text" class="form-control" ng-model="val1">		
+			</div>
+
+			<div class="form-group">
+				<label>第二个值：</label>
+				<input type="text" class="form-control" ng-model="val2">		
+			</div>
+
+			<div class="well">{{users[1]}}</div><!-- 模型数据为数组
+ -->
+
+		</form>
+	</div>
+</body>
+<script>//c-控制器(controller)
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope){  
+	$scope.users=['user1','user2','user3'];// 模型数据为数组
+
+
+	$scope.tot=function(){
+		str=parseInt($scope.val1)+parseInt($scope.val2) ;
+
+		return str?str:0;
+	}
+})
+
+</script>
+</html>

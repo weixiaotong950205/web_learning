@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		
+		<div class="form-group">
+			<input type="text" class="form-control" ng-model="find">
+		</div>
+
+		<div class="list-group">
+			<div class="well">url:<span class="label label-success">{{num}}</span></div>
+		</div>
+
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope,$http){  //$http与ajax很相似
+	$http.get('get.php').success(function(res){//res--响应的数据
+		if(res=='ok'){
+			$scope.num='1';
+		}else{
+			$scope.num='0';
+		}
+	});
+});
+
+</script>
+</html>

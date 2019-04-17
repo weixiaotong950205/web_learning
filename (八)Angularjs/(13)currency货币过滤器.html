@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl"><!-- myapp出来，mycontroller就一定会出来 --><!-- 要为ng加上作用域才有效 --> 
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<form action="">
+			<div class="form-group">
+				<label>用户名：</label>
+				<!-- m-数据模型 -->
+				<input type="text" class="form-control" ng-model="username">			
+			</div>
+			<!-- v-数据输出 -->
+			<div class="well">小阳阳：{{username|currency}}</div><!-- currency变成货币 -->
+
+
+		</form>
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope){  
+
+
+
+});
+
+</script>
+</html>

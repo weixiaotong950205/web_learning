@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl" >
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th>id</th>
+				<th>username</th>
+				<th>paddword</th>
+				<th>delete</th>
+			</tr>
+
+			<tr  ng-repeat='user in users'><!-- 将下方的数据库弄到这个表格里面来 --><!-- 要循环遍历user in users -->
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+				<td>{{user.pass}}</td>
+				<td><a href="">删除</a></td>
+			</tr>
+		</table>
+
+	</div>
+</body>
+<script>//c-控制器(controller)
+app=angular.module('myapp',[]);
+
+app.controller('myctl',function($scope){
+	$scope.users=[
+	{'id':'1','name':'user1','pass':'123'},
+	{'id':'2','name':'user1','pass':'123'},
+	{'id':'3','name':'user1','pass':'123'},
+	{'id':'4','name':'user1','pass':'123'},
+	{'id':'5','name':'user1','pass':'123'},
+	{'id':'6','name':'user1','pass':'123'},
+	{'id':'7','name':'user1','pass':'123'},
+	{'id':'8','name':'user1','pass':'123'},
+	{'id':'9','name':'user1','pass':'123'},
+	{'id':'10','name':'user1','pass':'123'}
+	]
+})
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		
+		<div class="form-group">
+			<input type="text" class="form-control" ng-model="find">
+		</div>
+
+		<div class="list-group">
+			<a href="" class="list-group-item" ng-repeat='row in rows|filter:find'>{{row}}</a><!-- filter:find过滤器，从数组中选出一个：函数这个find的都可以显示出来 -->
+		</div>
+
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope){  
+	$scope.rows=['html','css','java','php','linux'];
+
+
+});
+
+</script>
+</html>

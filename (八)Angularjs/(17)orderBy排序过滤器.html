@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		
+		<div class="form-group">
+			<input type="text" class="form-control" ng-model="find">
+		</div>
+
+		<div class="list-group">
+			<a href="" class="list-group-item" ng-repeat='row in rows|filter:find|orderBy:"id"'>{{row.name}}</a><!-- orderBy:"id"根据id排序,根据数字排序 -->
+		</div>
+
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope){  
+	$scope.rows=[
+	{'name':'user110','id':1},//1,2,4,30,40如果不加引号，就是按自然数排序的：1->110->2
+	{'name':'linux','id':30},
+	{'name':'user10','id':2},
+	{'name':'php20','id':40},
+	{'name':'java30','id':4},
+	];
+
+
+});
+
+</script>
+</html>
