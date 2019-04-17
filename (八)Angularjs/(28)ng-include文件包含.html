@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl"><!-- ng-app="myapp"模块 -->
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		
+		<div ng-include="'get.html'"></div><!-- 这个文件里面双引号里还有个单引号 -->
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+
+app.controller('myctl',function($scope){ 
+
+
+});
+</script>
+</html>

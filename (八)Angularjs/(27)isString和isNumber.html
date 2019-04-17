@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl"><!-- ng-app="myapp"模块 -->
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		
+		<div class="well">
+			a:{{a}}
+		</div>
+		
+		<div class="well">
+			b:{{b}}
+		</div>
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+
+app.controller('myctl',function($scope){ 
+	$scope.a=angular.isString('hello');
+	$scope.b=angular.isNumber(12);
+
+});
+</script>
+</html>

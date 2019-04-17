@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+	<script src="ng/angular-route.js"></script><!-- 这个要包含进来 -->
+</head>
+<body ng-app="myapp" >
+	<div class="container">
+		<h1 class="page-header">angular框架</h1>
+		<div class="col-md-2">
+			<div class="list-group">
+				<a href="#/" class="list-group-item">首页</a>
+				<a href="#/linux" class="list-group-item">linux</a>
+				<a href="#/php" class="list-group-item">php</a>
+				<a href="#/html5" class="list-group-item">html5</a>
+				<a href="#/java" class="list-group-item">java</a>
+			</div>
+		</div>
+
+		<div class="col-md-10">
+			<div ng-view></div>
+		</div>
+		
+
+		
+	</div>
+</body>
+<script>
+angular.module('myapp',['ngRoute']).config([//ngRoute路由模块
+	'$routeProvider',
+	function($routeProvider){
+		$routeProvider
+		.when('/',{template:'index首页'})
+		.when('/linux',{template:'index页面'})
+		.when('/php',{template:'php页面'})
+		.when('/html5',{template:'html5页面'})
+		.when('/java',{template:'java页面'})
+		.otherwise({redirectTo:'/'});
+	}
+]); 
+
+</script>
+</html>
