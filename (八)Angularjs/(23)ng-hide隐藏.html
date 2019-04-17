@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<p>
+			<button class="btn btn-primary" ng-click="dis()">隐藏</button>
+		</p>
+
+		<div class="jumbotron" ng-hide='nh'><!-- ng-hide='nh'一点隐藏就让他隐藏，nh的值是true就隐藏了 -->
+			<h1>Linux is very much!!</h1>
+		</div>
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope,$http){ 
+	$scope.dis=function(){
+		$scope.nh='true';//只要改变ng-hide='nh'--nh里面的值，就会隐藏
+	}
+});
+
+</script>
+</html>

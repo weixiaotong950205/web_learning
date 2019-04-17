@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl"><!-- ng-app="myapp"模块 -->
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<form action="">
+			<div class="form-group">
+				<label>用户名：</label>
+				<input type="text" class="form-control" ng-model="user.username"><!-- 这个是一个json	 -->		
+			</div>
+			<div class="form-group">
+				<label>密码：</label>
+				<input type="text" class="form-control" ng-model="user.password">	
+			</div>
+
+			<div class="form-group">
+				<input type="button" class="btn btn-danger btn-lg" value="重置" ng-click='reset()'>	
+			</div>
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);//这个也是模块
+
+app.controller('myctl',function($scope,$http){ //这个是控制器
+	$scope.master={'username':'user1','password':'123'};
+	$scope.reset=function(){
+		$scope.user=angular.copy($scope.master);//这里copy一份过来，为了防止忘记最初的username和password
+	}
+	$scope.reset();
+});
+
+</script>
+</html>

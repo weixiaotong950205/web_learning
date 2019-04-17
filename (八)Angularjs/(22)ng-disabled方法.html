@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<p>
+			<button class="btn btn-primary" ng-click="dis()">禁用</button><!-- onclick="dis()"点击它禁用 -->
+		</p>
+
+		<div class="form-group">
+			<label>留言：</label>
+			<textarea class="form-control" ng-disabled='nd'></textarea><!-- ng-disabled='nd'使他不能输入 -->
+		</div>
+
+	</div>
+</body>
+<script>//angularjs改变的只有数据；
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope,$http){ 
+	$scope.dis=function(){
+		$scope.nd=true;//点击禁用，就不能输入了
+	}
+});
+
+</script>
+</html>

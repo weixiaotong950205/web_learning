@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<p>
+			<button class="btn btn-primary" ng-click="dis()">显示</button>
+		</p>
+
+		<div class="jumbotron" ng-show='ns'>
+			<h1>Linux is very much!!</h1>
+		</div>
+
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+app.controller('myctl',function($scope,$http){ 
+	$scope.dis=function(){
+		$scope.ns='true';//改变成true值就显示
+	}
+});
+
+</script>
+</html>
