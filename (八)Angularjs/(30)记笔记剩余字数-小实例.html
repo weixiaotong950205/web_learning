@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+
+		textarea{
+			height: 300px!important;
+			resize: none;/* 不允许改变框的大小 */
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+	<script src="ng/angular-route.js"></script><!-- 这个要包含进来 -->
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+	<div class="container">
+		<h1 class="page-header">angular框架</h1>
+		
+		<form action="">
+			<div class="form-group">
+				<label>我的笔记：</label>
+				<textarea name="" class="form-control" ng-model='txt'></textarea>
+			</div>
+
+			<div class="form-group">
+				<input type="button" value="保存" class="btn btn-primary" ng-click='save()'><!-- type="button"表单不会被提交 -->
+				<input type="button" value="清空" class="btn btn-danger" ng-click='clear()'>
+			</div>
+
+			<div class="form-group">
+				<div class="well">剩余字数：{{left()}}</div>
+			</div>
+		</form>
+
+		
+
+		
+	</div>
+</body>
+<script>
+app=angular.module('myapp',[]);
+
+app.controller('myctl',function($scope){
+	$scope.tot=100;//剩余的总字数是100
+	$scope.txt='';
+
+
+	$scope.left=function(){
+		return $scope.tot-$scope.txt.length;
+	}
+
+	$scope.save=function(){
+		alert('save is success!');
+	}
+
+	$scope.clear=function(){
+		$scope.txt='';
+	}
+});
+
+</script>
+</html>
