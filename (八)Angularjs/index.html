@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angularjs</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script src="ng/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl" >
+	<div class="container">
+		<h1 class="page-header">angularjs学习</h1>
+		<div class="list-group">
+			<a href="" class="list-group-item active" ng-repeat="user in users">{{user.name}}</a><!-- 让这个第一个users处于激活状态 -->
+			<a href="" class="list-group-item" ng-repeat="user in users2">{{user.name}}</a>
+
+		</div>
+
+	</div>
+</body>
+<script>//c-控制器(controller)
+app=angular.module('myapp',[]);
+
+app.controller('myctl',function($scope){
+	$scope.users=[
+	{'id':'1','name':'user1','pass':'123'},
+	{'id':'2','name':'user2','pass':'123'},
+	{'id':'3','name':'user3','pass':'123'},
+	{'id':'4','name':'user4','pass':'123'},
+	{'id':'5','name':'user5','pass':'123'},
+	{'id':'6','name':'user6','pass':'123'},
+	{'id':'7','name':'user7','pass':'123'},
+	{'id':'8','name':'user8','pass':'123'},
+	{'id':'9','name':'user9','pass':'123'},
+	{'id':'10','name':'user10','pass':'123'}
+	];
+
+	$scope.users2=$scope.users.splice(1);//splice(1)从1开始截取到最后是users2;让users1是激活状态；
+})
+
+</script>
+</html>
