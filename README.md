@@ -127,3 +127,8 @@ BootStrap学习大纲：1.全局CSS样式；2.组件；3.javascript插件
 
 ![image](https://github.com/weixiaotong950205/web_learning/blob/master/images/angularjs%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B22.png)
 
+
+
+
+!!!!!!★解决Ajax跨域问题--解决方法：
+   下载wamp server，搭建虚拟服务器环境；----在localhost中还是打不开文件，显示404的话，就把www目录下的index.php删掉就可以了！！！！
