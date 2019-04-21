@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- 样式css在home/public/css里面的index.css -->
+	<meta charset="UTF-8">
+	<title>网站首页</title>
+	<meta name="Keywords" content="【酒仙网】酒水在线销售专业品牌">
+	<meta name="Description" content="【酒仙网】酒水在线销售专业品牌,提供白酒、红酒、洋酒、保健酒、黄酒、酒具、正品等多种品类,官方授权在线销售,各类酒水团购、秒杀不断。">
+	<link rel="stylesheet" href="public/css/index.css"><!-- 这里面放的是这个网站的全部样式 -->
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css"> <!-- 放幻灯片 -->
+	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/index.js"></script>
+	<script src="public/js/bootstrap.min.js"></script> 
+	<script src="public/js/holder.min.js"></script>
+</head>
+<body>
+	<div class="top"><!-- (1)上面一小条欢迎登陆,分为左div和右div -->
+		<div class="topmain">
+			<div class="left">
+				<span>欢迎来到酒仙网！</span>
+				<a href="">请登录</a>
+				<a href="">免费注册</a>
+			</div>
+
+			<div class="right">
+				<div class="myjiuxian">
+					<div class="top">
+						<a href="">我的酒仙<s class="caret"></s></a><!-- caret小三角 -->
+					</div>
+					<div class="down">
+						<ul>
+							<li><a href="">我的订单</a></li>
+							<li><a href="">物流跟踪</a></li>
+							<li><a href="">我的优惠券</a></li>
+						</ul>
+					</div>
+					
+
+				</div>
+				<a href="" class="ceo">CEO邮箱</a>
+				<a href="">购物车<span class="cart">0</span>件</a>
+				<a href="" class="shequ">社区</a>
+				<a href="" class="shouji">手机逛酒仙</a>
+				<a href="">网站导航</a>
+				<a href="">客服服务</a>
+				<span>客服热线<span class="dianhua">400-617-9999</span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner"><!-- (2)这是一个长条的大图片 -->
+		<a href="../admin.html" target="blank"></a>
+	</div>
+
+	<div class="midHeader"><!-- (3)这里是一个白色背景的区块 -->
+		<div class="midHeader-main"><!-- 有四大块-logo+huodong+搜索框+yunfei --><!-- 里面是宽为1200px的 -->
+			<div class="logo">
+				<img src="public/img/logo.png">
+			</div>
+			<div class="huodong">
+				<img src="public/img/huodong.gif">
+			</div>
+			<div class="find"><!-- 这个搜索框-分为上下两部分 -->
+				<div class="top">
+					<form>
+						<input type="text"  class="search-form" placeholder="超级单品日">
+						<input type="button"  class='search-btn' value="搜索">
+					</form>
+				</div>
+				<div class="down">
+					<a href="">茅台<s class="shuxian"></s></a>
+					<a href="">五粮液<s class="shuxian"></s></a>
+					<a href="">酒鬼<s class="shuxian"></s></a>
+					<a href="">拉菲<s class="shuxian"></s></a>
+					<a href="">郎酒<s class="shuxian"></s></a>
+					<a href="">黄尾袋鼠<s class="shuxian"></s></a>
+					<a href="">水井坊<s class="shuxian"></s></a>
+					<a href="">泸州老窖<s class="shuxian"></s></a>
+					<a href="">奔富<s class="shuxian"></s></a>
+					<a href="">董酒<s class="shuxian"></s></a>
+				</div>
+			</div>
+			<div class="yunfei"><!-- 这里是个图片 -->
+				<img src="public/img/yunfei.png">
+			</div>
+		</div>
+	</div>
+
+	<div class="nav"><!-- (4)这是幻灯片上面的小导航条 --> <!-- 这里只有幻灯片的图片轮播  -->
+		<div class="navmain"><!--幻灯片的中间区域-->
+			<div class="left"><!-- navmain-left左侧的商品分类大块 -->
+				<h2>全部商品分类</h2>
+				<ul>
+					<li></li>
+					
+				</ul>
+			</div>
+			<div class="center"><!-- navmain-center右上商品分类导航 -->
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">领券中心</a></li>
+					<li><a href="">酒鬼酒专场</a></li>
+					<li><a href="">值得买</a></li>
+					<li><a href="">葡萄酒馆</a></li>
+					<li><a href="">自营甄选</a></li>
+					<li><a href="">洋酒馆</a></li>
+					<li><a href="">新品</a></li>
+					<li><a href="">CLUB</a></li>
+
+				</ul>
+			</div>
+			<div class="right"><!-- 右侧的动图 -->
+				<a href=""><!-- 鼠标点一下就怎么怎么样，说明有a链接 -->
+					<img src="public/img/navmain-right.gif">
+				</a>
+				
+			</div>
+			
+
+		</div>
+	</div>
+
+	<div class="ppt"><!-- (5)幻灯片区域 --><!-- 可以用插件,可以自己用js写 --><!-- 这里用的是百度的jquery幻灯片插件-skipper;这个在手机端也可以正常使用 -->
+		<div id="myppt" class="carousel slide" data-ride="carousel"><!-- 父id-myppt --><!-- data-ride="carousel"在页面加载时就开始动画播放 -->
+		  	<!-- 指示灯 -->
+	  		<ol class="carousel-indicators">
+	    		<li data-target="#myppt" data-slide-to="0" class="active"></li><!-- data-target="#myppt"找到父id --><!-- 控制轮播图下面的小点的跳转位置 -->
+			    <li data-target="#myppt" data-slide-to="1"></li>
+			    <li data-target="#myppt" data-slide-to="2"></li>
+			</ol>
+
+			<!-- 图 -->
+			<div class="carousel-inner">
+			    <div class="item active"><!-- 默认第一幅图是激活的 -->
+			      	<img src="public/img/ppt1.jpg" alt="">
+			    </div>
+			    <div class="item">
+			      	<img src="public/img/ppt2.jpg" alt="">
+			    </div>
+			    <div class="item">
+			      	<img src="public/img/ppt3.jpg" alt="">
+			    </div>
+			</div>
+
+			<!-- 左右控制器 -->
+			<a class="left carousel-control" href="#myppt" data-slide="prev"><!-- 左控制器，data-slide="prev"是翻到前一页 -->
+			    <span class="glyphicon glyphicon-chevron-left"></span><!-- 左指向的符号 -->
+			</a>
+
+			<a class="right carousel-control" href="#myppt" data-slide="next"><!-- 右控制器，能翻到后一页 -->
+			    <span class="glyphicon glyphicon-chevron-right"></span><!-- 右指向的符号 -->
+			</a>
+		</div>
+	</div>
+	
+	<div class="main"><!-- 需要1200px定宽的时候就加入这个main就好---中间的大块 -->
+		
+	</div>
+
+	<div class="footer">
+		<div class="footermain">
+			
+		</div>
+	</div>
+
+	<div class="bottom">
+		<div class="bottommain">
+			
+		</div>
+	</div>
+</body>
+<script>
+
+
+</script>
+</html>

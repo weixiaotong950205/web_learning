@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网站后台</title>
+	<link rel="stylesheet" href="public/bs/css/bootstrap.min.css"><!-- 这些链接的位置都要对！！！ -->
+	<script src="public/bs/js/jquery.min.js"></script>
+	<script src="public/bs/js/bootstrap.min.js"></script>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		.container{
+			padding-top:65px; 
+		}
+		.list-group{
+			padding-left: 65px;
+		}
+		.jumbotron{
+			width: 1200px;
+		}
+	</style>
+</head>
+<body><!-- 用bs来写后台首页 -->
+	<div class="container">
+	<!-- 导航菜单：bootstrap官方手册--组件--导航条--拖拽过来 -->
+		<nav class="navbar navbar-inverse navbar-fixed-top"><!-- navbar-inverse导航条反色；navbar-fixed-top导航条固定到顶端 -->
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">酒仙后台</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      
+		      
+		      <ul class="nav navbar-nav navbar-right"><!-- 这里增加了几个li布局 -->
+		        <li><a href="#"><span class="glyphicon glyphicon-star-empty"></span>站点首页</a></li><!-- 这里修改了名称，加了个图标 -->
+		        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>Admin</a></li>
+		        <li><a href="#"><span class="glyphicon glyphicon-cog"></span>修改密码</a></li>
+		        <li><a href="login.html"  onclick='return confirm("您确认退出吗？")'><span class="glyphicon glyphicon-off"></span>安全退出</a></li><!-- 右上角的退出-点击退出到同一级目录下的login.html ,同时弹出对话框-->
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</div>
+
+	<!-- 后台内容：左边+右边 -->
+	<div class="row">
+		<div class="col-md-2">
+			<div class="list-group">
+				<a href="javascript:" class="list-group-item active">用户管理：</a><!-- javascript:不让他跳转 -->
+				<a href="javascript:" class="list-group-item usershow">查看用户</a><!-- 用Ajax做usershow和useradd!!!在script的控制器里面写 -->
+				<a href="javascript:" class="list-group-item useradd">添加用户</a>
+			</div>
+			<div class="list-group">
+				<a href="javascript:" class="list-group-item active">分类管理：</a>
+				<a href="" class="list-group-item">查看分类</a>
+				<a href="" class="list-group-item">添加分类</a>
+			</div>
+			<div class="list-group">
+				<a href="javascript:" class="list-group-item active">品牌管理：</a>
+				<a href="" class="list-group-item">查看品牌</a>
+				<a href="" class="list-group-item">添加品牌</a>
+			</div>
+			<div class="list-group">
+				<a href="javascript:" class="list-group-item active">商品管理：</a>
+				<a href="" class="list-group-item">查看商品</a>
+				<a href="" class="list-group-item">添加商品</a>
+			</div>
+		</div>
+		<div class="col-md-10 rightinfo">
+			<div class="jumbotron">
+				<h1>欢迎回到我的后台！！</h1>
+				<img src="public/img/jx.jpg" width="100%">
+				<br>
+				<br>
+				<a href="../index.html" class="btn btn-primary btn-lg">网站首页</a><!-- ../表示：上一级目录(myweb)下的index.html(网站前台) -->
+				<a href="login.html" class="btn btn-danger btn-lg" onclick="return confirm('您确认退出吗？')">退出后台</a><!-- 点击弹出确认框 -->
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+//左侧每一项的第二、三个都可以缩回去
+$('.list-group .list-group-item').hide();//要注意留有空格
+$('.list-group .list-group-item:first-child').show();//选择器
+$('.list-group-item.active').first().nextAll().show();//默认第一个的下面两个是显示出来的
+
+$('.list-group-item.active').click(function(){//点击一个下俩个显示；其他都隐藏
+	$('.list-group-item.active').nextAll().hide();
+	$(this).nextAll('.list-group-item').show();
+
+});
+
+//控制器
+$('.usershow').click(function(){
+	$('.rightinfo').load('usershow.html');//??这里出现了Ajax跨域问题；要在服务器环境里运行??因为ajax只能用于请求服务器的数据，而在本地测试，打开的文件是以 file：// 的形式， 所以报错；而不是本地页面直接访问本地文件的方式，这样保证了在用post或者get这类http请求，才能避免ajax跨域问题。-->还是把本地jsp放入tomcat中运行再访问本地文件吧！
+});
+
+$('.useradd').click(function(){
+	$('.rightinfo').load('useradd.html');//??这里出现了Ajax跨域问题；要用jsonp格式??
+});
+
+
+</script>
+</html>
