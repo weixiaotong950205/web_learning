@@ -1,0 +1,366 @@
+
+/* 这里放网页的样式 */
+*{
+	font-family: 微软雅黑;
+	margin: 0px;/* 上面有一条灰色的div‘欢迎登陆网站’是左右满屏的，去掉margin和padding;下面的商品详情不是满屏，是宽1200px;最下面的配送信息啥的又是满屏黑框 */
+	padding: 0px;
+}
+
+body{
+	background: #F9F9F9;/* 整个网页的背景颜色是灰色； */
+}
+
+.main{/* 这个容器用来装载上述的商品详情1200px的内容大块 *//* 主要是定个宽度1200px，宽度不用他管 */
+	width: 1200px;
+	height: 100%;
+	background: #aaf;
+	margin: 0 auto;
+}
+
+
+/* (1)这里是最上的长条导航 */
+.top{
+	height: 26px;
+	background: #F2F2F2;
+}
+
+.topmain{
+	width: 1200px;
+	height: 100%;
+	line-height: 26px;
+}
+
+.ceo{
+	color: #c00!important;
+	text-decoration: none;
+}
+.cart{/* 购物车件数的数字 */
+	color: #cc0001;
+	font-weight: bold;
+	text-decoration: none;
+}
+.shequ{
+	color: #999;
+	text-decoration: none;
+
+}
+.shouji{
+	color: #fff!important;
+	text-decoration: none;
+	background: #cc0001;
+
+}
+.dianhua{
+	color: #cc0001;
+	font-weight: bold;
+	text-decoration: none;
+}
+.topmain{
+	margin: 0 auto;
+	color: #999;
+}
+.topmain .left{/* 导航条左div左浮 */
+	float: left;
+}
+
+.topmain .left a{
+	color: #999;
+	text-decoration: none;
+}
+
+.topmain .right{/* 导航条右div右浮 */
+	float: right;
+
+}
+
+.topmain .right a{
+	color: #999;
+	text-decoration: none;
+}
+
+.top a:hover{/* 增加滑动样式 */
+	color: #cc0001;
+	text-decoration: underline;
+}
+
+.top .right .myjiuxian{
+	float: left;
+	width: 90px;/* 照顾到下拉列表里-’我的优惠券‘的宽度 */
+}
+.top .right .myjiuxian .top{/* 下拉菜单中的第一项-’我的酒仙‘ */
+	background: #F2F2F2;
+	padding: 0px 5px;/* 上下0px;左右5px; */
+}
+.top .right .myjiuxian .down{/* 下拉菜单的下拉部分 */
+	background: #fff;
+	display: none;/* 默认让下拉部分内容消失 */
+}
+
+.top .right .myjiuxian .down ul{
+	list-style: none;/* 去掉ul-li里面--前面的小点点； */
+	padding: 0px 5px;/* 上下0px;左右5px; */
+}
+
+.top .caret{/* 我的酒仙后面-小三角 */
+
+	display: inline-block;/* 这个小caret本身没有宽高；把它变成一定的块标签 */
+	width: 9px;
+	height: 8px;
+	background: url('../img/caret.png') no-repeat -99px 6px;/* 这个图片需要定位到里面的小三角；里面有很多小图案 */
+	
+}
+
+
+/* (2)这是长条图片 */
+.banner a{/* a链接本身是行标签，没有宽高，要设置成block； */
+	display: block;
+	width: 100%;
+	height: 90px;
+	background: url('../img/2dcdb9cfc2e1419688e86459ec576a16.jpg') no-repeat top center;/* y轴是top;x轴是居中 *//* 上一级目录下的img里面的 */
+}
+
+
+/* (3)这是白色图块：logo+huodong+搜索框+yunfei  */
+.midHeader{
+	height: 125px;
+	background: #fff;
+}
+.midHeader-main{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 30px;/* 让图片垂直居中； */
+}
+
+.midHeader-main .logo{
+	float: left;
+}
+
+.midHeader-main .huodong{
+	float: left;
+	margin-left: 15px;
+}
+.midHeader-main .find{/* 搜索框 */
+	float: left;
+	width: 540px;
+	height: 61px;
+	margin-left: 15px;
+}
+
+.midHeader-main .yunfei{
+	float: right;
+	width: 363px;
+	height: 43px;
+	background: url('../img/yunfei.png');
+}
+
+.midHeader-main .down{
+	height: 18px;
+	line-height: 18px;
+}
+
+.midHeader-main .find .down{
+	color: #666;
+	margin-top: 10px;
+}
+.midHeader-main .find .down a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #666;
+}
+
+.midHeader-main .find .down a:hover{/* 鼠标往上一划有样式 */
+	color: #cc0001;
+}
+
+.shuxian{  /* 搜索框下面的酒种类之间的竖线 */
+	width: 0px;
+	height: 12px;
+	border-left: 1px solid #999;
+	margin-left: 10px;
+	margin-right: 2px;
+
+}
+.midHeader-main .find .top{/* 这个外面的边框厚度是3px，那么高度就要>25px */
+	height: 30px;
+	border: 3px solid #c00;
+}
+
+.midHeader-main .find .top .search-form{
+	width: 448px;
+	height: 25px;
+	border: none;
+	color: #666;
+	float: left;
+}
+.midHeader-main .find .top .search-form:focus{
+	outline: none;/* 鼠标点击，框内就没有东西了 */
+}
+
+.midHeader-main .find .top .search-btn{
+	width: 85px;
+	height: 25px;
+	text-align: center;
+	border: 0px;
+	background: #c00;
+	float: right;
+	color: #fff;
+	font-size: 16px;
+}
+.midHeader-main .find .top .search-btn:focus{
+	outline: none;
+}
+
+
+/* (4)这是幻灯片上面的小导航条样式 */
+.nav{
+	height: 34px;
+	background: #900;
+}
+
+.navmain{
+	width: 1200px;
+	height: 34px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+.navmain .left{
+	width: 190px;
+	height: 34px;
+	background: #CE171F;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	float: left;/* 这里也要浮动，下面的navmain center浮动才能正常 */
+}
+.navmain .left h2{
+	font-size: 14px;
+	line-height: 34px;/* 目标元素的line-height大小等于父类元素的height大小,可以实现垂直居中 */
+	margin: 0px;
+}
+
+.navmain .center{
+	height: 34px;
+	width: 890px;
+	float: left;
+}
+.navmain .center a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.navmain .center ul{
+	list-style: none;
+}
+
+.navmain .center ul li{
+	float: left;
+	line-height: 34px;/* 行高与父元素高度相同---让他垂直居中 */
+	margin-right: 15px;
+	padding: 0px 10px;/* 内边距 */
+}
+.navmain .center ul li:hover{/* 鼠标只要放上去就变成小手 */
+	cursor: pointer;
+}
+
+.navmain .right{
+	height: 34px;
+	float: right;
+}
+
+
+/* (5)幻灯片区域 */
+.chucuo{
+	height: 470px!important;
+}
+
+
+/* (6)这是幻灯片左侧导航实现 */
+.leftmenu{
+	height: 470px;
+	margin: 0px;/* 要不导航条下面总是会出现margin-bootom: 10px; */
+	background: #fff;
+	position: relative;/* 这两句是为了让这个导航框处在上面的位置 */
+	z-index: 1;
+	list-style: none;
+}
+.leftmenu .leftnav{/* 鼠标放上leftmenu li，有红色左边框出现--配合js */
+	width: 4px;
+	height: 77px;
+	background: #CE171F;
+	position: absolute;/* 让他漂在上面 */
+	display: none;/* 默认隐藏 */
+}
+.leftmenu li.menuli{
+	height: 77px;/* 470/4 */
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.leftmenu li.menuli:hover{/* 鼠标往上一划左边多了一点红色边框(在leftmenu-leftnav设置) 并且背景颜色变化 */
+	background: #f1f1f1;
+}
+.leftmenu .menutop{
+	height: 32px;
+	line-height: 32px;
+	margin-bottom: 0px;
+	color: #fff;
+}
+.leftmenu .menutop i{
+	background: url('../img/tu.png') -73px -260px;
+	display:inline-block;/* 让他是行内标签 */
+	width: 14px;
+	height: 20px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.leftmenu .menutop a{
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	float: left;
+	margin-left: 15px;
+
+}
+.leftmenu .menudown{
+	overflow: hidden;/* 超出则隐藏 */
+	height: 45px;/* 77一大块-32一键选酒 */
+	font-size: 12px;
+	padding-left: 15px;
+	color: #000;
+}
+
+.leftmenu .menudown p{
+	height: 20px;
+	margin-bottom: 0px;
+	text-align: left;/* 文字-左边对齐 */
+}
+
+.leftmenu .menudown p a{
+	text-decoration: none;
+	color: #666;
+}
+.leftmenu .rightdiv{/* 配合js---要把这个属于右侧的div定位到合适的位置，可以相对于左div-leftmenu进行定位 */
+	color: #000;
+	width: 800px;
+	height: 470px;
+	background: #E4E3E9;
+	position: absolute;/* 必须是绝对定位 */
+	display: none;/* 默认不显示；鼠标移上去再显示 */
+	z-index: 111;/* 幻灯片下面小点点的z-index设置成是10，要比他高 */
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+	opacity: 0.9;
+}
+.carousel-indicators{
+	z-index: 1!important;/* 幻灯片下面小点点的z-index设置成是10 */
+}
+
+
+/* 下面的main */
+.main h1{
+	margin: 0px;
+}
