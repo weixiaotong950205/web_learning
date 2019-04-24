@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- 样式css在home/public/css里面的index.css -->
+	<meta charset="UTF-8">
+	<title>网站首页</title>
+	<meta name="Keywords" content="【酒仙网】酒水在线销售专业品牌">
+	<meta name="Description" content="【酒仙网】酒水在线销售专业品牌,提供白酒、红酒、洋酒、保健酒、黄酒、酒具、正品等多种品类,官方授权在线销售,各类酒水团购、秒杀不断。">
+	<link rel="stylesheet" href="public/css/index.css"><!-- 这里面放的是这个网站的全部样式 -->
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css"> <!-- 放幻灯片 -->
+	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/index.js"></script>
+	<script src="public/js/bootstrap.min.js"></script> 
+	<script src="public/js/holder.min.js"></script>
+</head>
+<body>
+	<div class="top"><!-- (1)上面一小条欢迎登陆,分为左div和右div -->
+		<div class="topmain">
+			<div class="left">
+				<span>欢迎来到酒仙网！</span>
+				<a href="">请登录</a>
+				<a href="">免费注册</a>
+			</div>
+
+			<div class="right">
+				<div class="myjiuxian">
+					<div class="top">
+						<a href="">我的酒仙<s class="caret"></s></a><!-- caret小三角 -->
+					</div>
+					<div class="down">
+						<ul>
+							<li><a href="">我的订单</a></li>
+							<li><a href="">物流跟踪</a></li>
+							<li><a href="">我的优惠券</a></li>
+						</ul>
+					</div>
+					
+
+				</div>
+				<a href="" class="ceo">CEO邮箱</a>
+				<a href="">购物车<span class="cart">0</span>件</a>
+				<a href="" class="shequ">社区</a>
+				<a href="" class="shouji">手机逛酒仙</a>
+				<a href="">网站导航</a>
+				<a href="">客服服务</a>
+				<span>客服热线<span class="dianhua">400-617-9999</span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner"><!-- (2)这是一个长条的大图片 -->
+		<a href="../admin.html" target="blank"></a>
+	</div>
+
+	<div class="midHeader"><!-- (3)这里是一个白色背景的区块 -->
+		<div class="midHeader-main"><!-- 有四大块-logo+huodong+搜索框+yunfei --><!-- 里面是宽为1200px的 -->
+			<div class="logo">
+				<img src="public/img/logo.png">
+			</div>
+			<div class="huodong">
+				<img src="public/img/huodong.gif">
+			</div>
+			<div class="find"><!-- 这个搜索框-分为上下两部分 -->
+				<div class="top">
+					<form>
+						<input type="text"  class="search-form" placeholder="超级单品日">
+						<input type="button"  class='search-btn' value="搜索">
+					</form>
+				</div>
+				<div class="down">
+					<a href="">茅台<s class="shuxian"></s></a>
+					<a href="">五粮液<s class="shuxian"></s></a>
+					<a href="">酒鬼<s class="shuxian"></s></a>
+					<a href="">拉菲<s class="shuxian"></s></a>
+					<a href="">郎酒<s class="shuxian"></s></a>
+					<a href="">黄尾袋鼠<s class="shuxian"></s></a>
+					<a href="">水井坊<s class="shuxian"></s></a>
+					<a href="">泸州老窖<s class="shuxian"></s></a>
+					<a href="">奔富<s class="shuxian"></s></a>
+					<a href="">董酒<s class="shuxian"></s></a>
+				</div>
+			</div>
+			<div class="yunfei"><!-- 这里是个图片 -->
+				<img src="public/img/yunfei.png">
+			</div>
+		</div>
+	</div>
+
+	<div class="nav"><!-- (4)这是幻灯片上面的小导航条 --> <!-- 这里只有幻灯片的图片轮播  -->
+		<div class="navmain"><!--幻灯片的中间区域-->
+			<div class="left"><!-- navmain-left左侧的商品分类大块 -->
+				<h2>全部商品分类</h2>
+
+				<!-- (6)这是幻灯片左侧导航实现 -->
+				<ul class="leftmenu">
+					<li class="menuli"><!-- 这里分为左div-导航类、右div-详情 第一个-一共六个-->
+						<div class="leftnav"></div><!-- 让左侧出现了红色边框但总体内容不都往右边移 -->
+						<div class="leftdiv">
+							<p class="menutop">
+								<i></i><!-- 这是小爱心图标 -->
+								<a href="">一键选酒</a><!-- 这是个链接，点击会出现右边的div -->
+							</p>
+							<div class="menudown">
+								<p><!-- 共两行-可选择种类(第一行) -->
+									<a href="">整箱购</a>
+									<a href="">家乡名酒</a>
+									<a href="">年份老酒</a>
+								</p>
+								<p><!-- 第二行 -->
+									<a href="">地域名酒</a>
+									<a href="">值得买</a>
+									<a href="">实惠大坛</a>
+								</p>
+							</div>
+						</div>
+						<div class="rightdiv">
+							<p>整箱购、扳倒井、汾酒、伊力特、洋河、衡水老白干、青岛啤酒；浓香型白酒：也称为泸香型、窖香型、五粮液香型，属大曲酒类。其特点可用六个字、五句话来概括：六个字是香、醇、浓、绵、甜、净；五句话是窖香浓郁，清冽甘爽，绵柔醇厚，香味协调，尾净余长。以粮谷为原料，经固态发酵、贮存、勾兑而成，典型代表有泸州老窖、老酒坊、紫砂大曲等。</p>
+						</div>
+					</li>
+
+					<li class="menuli"><!-- 第二个-复制 -->
+						<div class="leftnav"></div>
+						<div class="leftdiv">
+							<p class="menutop">
+								<i></i>
+								<a href="">白酒</a>
+							</p>
+							<div class="menudown">
+								<p>
+									<a href="">茅台</a>
+									<a href="">五粮液</a>
+									<a href="">酒鬼</a>
+									<a href="">汾酒</a>
+								</p>
+								<p>
+									<a href="">浓香型</a>
+									<a href="">酱香型</a>
+									<a href="">贵州</a>
+									<a href="">四川</a>
+								</p>
+							</div>
+						</div>
+						<div class="rightdiv">
+							<p>按照原料分类：白酒使用的原料主要为高粱、小麦、大米、玉米等，所以白酒又常按照酿酒所使用的原料来冠名，其中以高粱为原料的白酒是最多的。  按照使用酒曲分类：1、大曲酒：是以大曲做糖化发酵剂生产出来的酒，主要的原料有：大麦、小麦和一定数量的豌豆，大曲又分为中温曲、高温曲和超高温曲。一般是固态发酵，大曲酒所酿的酒质量较好，多数名优酒均以大曲酿成，例如泸州老窖、老酒坊、紫砂大曲等。2、小曲酒：是以小曲做糖化发酵剂生产出来的酒，主要的原料有：稻米，多采用半固态发酵，南方的白酒多是小曲酒。3、麸曲酒：是以麦麸做培养基接种的纯种曲霉做糖化剂，用纯种酵母为发酵剂生产出的酒，以发酵时间短、生产成本低为多数酒厂所采用，此类酒的产量也是最大的。</p>
+						</div>
+					</li>
+
+					<li class="menuli"><!-- 第三个-->
+						<div class="leftnav"></div>
+						<div class="leftdiv">
+							<p class="menutop">
+								<i></i>
+								<a href="">葡萄酒</a>
+							</p>
+							<div class="menudown">
+								<p>
+									<a href="">法国</a>
+									<a href="">澳大利亚</a>
+									<a href="">西班牙</a>
+								</p>
+								<p>
+									<a href="">中国</a>
+									<a href="">拉菲</a>
+									<a href="">奔富</a>
+									<a href="">黄尾袋鼠</a>
+								</p>
+							</div>
+						</div>
+						<div class="rightdiv">
+							<p>酱香型白酒：也称为茅香型，酱香突出、幽雅细致、酒体醇厚、清澈透明、色泽微黄、回味悠长。</p>
+						</div>
+					</li>
+					<li class="menuli"><!-- 第四个 -->
+						<div class="leftnav"></div>
+						<div class="leftdiv">
+							<p class="menutop">
+								<i></i>
+								<a href="">洋酒</a>
+							</p>
+							<div class="menudown">
+								<p>
+									<a href="">马爹利</a>
+									<a href="">人头马</a>
+									<a href="">尊尼获加</a>
+								</p>
+								<p>
+									<a href="">轩尼诗</a>
+									<a href="">绝对</a>
+									<a href="">百龄坛</a>
+								</p>
+							</div>
+						</div>
+						<div class="rightdiv">
+							<p>米香型白酒：也称为蜜香型，以大米为原料小曲作糖化发酵剂，经半固态发酵酿成。其主要特征是：蜜香清雅、入口柔绵、落口爽冽、回味怡畅。</p>
+						</div>
+					</li>
+					<li class="menuli"><!-- 第五个 -->
+						<div class="leftnav"></div>
+						<div class="leftdiv">
+							<p class="menutop">
+								<i></i>
+								<a href="">啤酒/黄酒/养生酒</a>
+							</p>
+							<div class="menudown">
+								<p>
+									<a href="">艾斯伯爵</a>
+									<a href="">青岛</a>
+									<a href="">1664</a>
+								</p>
+								<p>
+									<a href="">劲牌</a>
+									<a href="">猎鹰</a>
+									<a href="">狮虎争霸</a>
+								</p>
+							</div>
+						</div>
+						<div class="rightdiv">
+							<p>兼香型白酒：以谷物为主要原料，经发酵、贮存、勾兑而酿制成，酱浓谐调、细腻丰满、回味爽净、幽雅舒适、余味悠长。</p>
+						</div>
+					</li>
+					<li class="menuli"><!-- 第六个 -->
+						<div class="leftnav"></div>
+						<div class="leftdiv">
+							<p class="menutop">
+								<i></i>
+								<a href="">食尚</a>
+							</p>
+							<div class="menudown">
+								<p>
+									<a href="">酒具</a>
+									<a href="">茶叶</a>
+									<a href="">电子烟</a>
+								</p>
+							</div>
+						</div>
+						<div class="rightdiv">
+							<p>将酒液倒入杯中，用鼻子贴近杯口，辨别香气的高低和香气特点。</p>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+			<div class="center"><!-- navmain-center右上商品分类导航---(4)-->
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">领券中心</a></li>
+					<li><a href="">酒鬼酒专场</a></li>
+					<li><a href="">值得买</a></li>
+					<li><a href="">葡萄酒馆</a></li>
+					<li><a href="">自营甄选</a></li>
+					<li><a href="">洋酒馆</a></li>
+					<li><a href="">新品</a></li>
+					<li><a href="">CLUB</a></li>
+
+				</ul>
+			</div>
+			<div class="right"><!-- 右侧的动图 -->
+				<a href=""><!-- 鼠标点一下就怎么怎么样，说明有a链接 -->
+					<img src="public/img/navmain-right.gif">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="ppt"><!-- (5)幻灯片区域 --><!-- 可以用插件,可以自己用js写 --><!-- 这里用的是百度的jquery幻灯片插件-skipper;这个在手机端也可以正常使用 -->
+		<div id="myppt" class="carousel slide" data-ride="carousel"><!-- 父id-myppt --><!-- data-ride="carousel"在页面加载时就开始动画播放 -->
+		  	<!-- 指示灯 -->
+	  		<ol class="carousel-indicators">
+	    		<li data-target="#myppt" data-slide-to="0" class="active"></li><!-- data-target="#myppt"找到父id --><!-- 控制轮播图下面的小点的跳转位置 -->
+			    <li data-target="#myppt" data-slide-to="1"></li>
+			    <li data-target="#myppt" data-slide-to="2"></li>
+			</ol>
+			<!-- 图 -->
+			<div class="carousel-inner">
+			    <div class="item active"><!-- 默认第一幅图是激活的 -->
+			      	<img src="public/img/ppt1.jpg" class="chucuo">
+			    </div>
+			    <div class="item">
+			      	<img src="public/img/ppt2.jpg" class="chucuo">
+			    </div>
+			    <div class="item">
+			      	<img src="public/img/ppt3.jpg" class="chucuo">
+			    </div>
+			</div>
+			<!-- 左右控制器 -->
+			<a class="left carousel-control" href="#myppt" data-slide="prev"><!-- 左控制器，data-slide="prev"是翻到前一页 -->
+			    <span class="glyphicon glyphicon-chevron-left"></span><!-- 左指向的符号 -->
+			</a>
+			<a class="right carousel-control" href="#myppt" data-slide="next"><!-- 右控制器，能翻到后一页 -->
+			    <span class="glyphicon glyphicon-chevron-right"></span><!-- 右指向的符号 -->
+			</a>
+		</div>
+	</div>
+	
+	<div class="main"><!-- 需要1200px定宽的时候就加入这个main就好---中间的大块 -->
+		<div class="contentFirst"><!-- (7)幻灯片下面-标签页实现!! --><!--这个大div 分左大块和右大块 -->
+			<div class="indexTabBox"><!-- 这是左侧的大div：分两块 -->
+				<div class="indexTabNav"><!-- 左-上侧导航条 -->
+					<ul>
+						<li class="on">疯狂抢购</li>
+						<li>爆款推荐</li>
+						<li>婚庆喜宴</li>
+						<li>整箱钜惠</li>
+						<li>精选大牌</li>
+					</ul>
+				</div>
+
+				<div class="indexTabConWrap"><!-- 左-下内容1(应该有五个这个相同的内容-对应五个标签页) -->
+					<ul><!-- 包含：图片+中文详情+价格 ; 一共有十个图片-->
+						<li><!-- (第一小块图片) -->
+							<div class="indexTabPic">
+								<a href=""><!-- 超链接里面-放个图片 -->
+									<img src="public/img/jiu1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">清仓-52°泸州老窖-国窖经典(三瓶装)-500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥594.00</p>
+							</div>
+						</li>
+						<li><!-- (第二小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">41°老榆林小北京500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥39.00</p>
+							</div>
+						</li>
+						<li><!-- (第三小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖特曲酒500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥1429.00</p>
+							</div>
+						</li>
+						<li><!-- (第四小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">拉菲苏维翁干红葡萄酒</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥399.00</p>
+							</div>
+						</li>
+						<li><!-- (第五小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">澳大利亚红酒小海龟</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥89.00</p>
+							</div>
+						</li>
+						<li><!-- (第六小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu6.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖泸州原浆蓝色</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥59.00</p>
+							</div>
+						</li>
+						<li><!-- (第七小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu7.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">白水杜康一坛老酒1000ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥99.00</p>
+							</div>
+						</li>
+						<li><!-- (第八小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu8.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">刘伶醉 纪念酒 500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥129.00</p>
+							</div>
+						</li>
+						<li><!-- (第九小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu9.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">苏格兰威士忌500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥128.00</p>
+							</div>
+						</li>
+						<li><!-- (第十小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu10.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">克拉克干红葡萄酒750ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥199.00</p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="indexTabConWrap"><!-- 左-下内容2 -->
+					<ul><!-- 包含：图片+中文详情+价格 ; 一共有十个图片-->
+						<li><!-- (第一小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">清仓-52°泸州老窖500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥594.00</p>
+							</div>
+						</li>
+						<li><!-- (第二小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">41°老榆林小北京500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥39.00</p>
+							</div>
+						</li>
+						<li><!-- (第三小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖特曲酒500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥1429.00</p>
+							</div>
+						</li>
+						<li><!-- (第四小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">拉菲苏维翁干红葡萄酒</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥399.00</p>
+							</div>
+						</li>
+						<li><!-- (第五小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">澳大利亚红酒小海龟</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥89.00</p>
+							</div>
+						</li>
+						<li><!-- (第六小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖泸州原浆蓝色</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥59.00</p>
+							</div>
+						</li>
+						<li><!-- (第七小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">白水杜康一坛老酒1000ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥99.00</p>
+							</div>
+						</li>
+						<li><!-- (第八小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">刘伶醉 纪念酒 500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥129.00</p>
+							</div>
+						</li>
+						<li><!-- (第九小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">苏格兰威士忌500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥128.00</p>
+							</div>
+						</li>
+						<li><!-- (第十小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu2-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">克拉克干红葡萄酒750ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥199.00</p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="indexTabConWrap"><!-- 左-下内容3 -->
+					<ul><!-- 包含：图片+中文详情+价格 ; 一共有十个图片-->
+						<li><!-- (第一小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">清仓-52°泸州老窖500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥594.00</p>
+							</div>
+						</li>
+						<li><!-- (第二小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">41°老榆林小北京500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥39.00</p>
+							</div>
+						</li>
+						<li><!-- (第三小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖特曲酒500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥1429.00</p>
+							</div>
+						</li>
+						<li><!-- (第四小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">拉菲苏维翁干红葡萄酒</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥399.00</p>
+							</div>
+						</li>
+						<li><!-- (第五小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">澳大利亚红酒小海龟</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥89.00</p>
+							</div>
+						</li>
+						<li><!-- (第六小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖泸州原浆蓝色</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥59.00</p>
+							</div>
+						</li>
+						<li><!-- (第七小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">白水杜康一坛老酒1000ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥99.00</p>
+							</div>
+						</li>
+						<li><!-- (第八小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">刘伶醉 纪念酒 500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥129.00</p>
+							</div>
+						</li>
+						<li><!-- (第九小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">苏格兰威士忌500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥128.00</p>
+							</div>
+						</li>
+						<li><!-- (第十小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu3-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">克拉克干红葡萄酒750ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥199.00</p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="indexTabConWrap"><!-- 左-下内容4 -->
+					<ul><!-- 包含：图片+中文详情+价格 ; 一共有十个图片-->
+						<li><!-- (第一小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">清仓-52°泸州老窖500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥594.00</p>
+							</div>
+						</li>
+						<li><!-- (第二小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">41°老榆林小北京500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥39.00</p>
+							</div>
+						</li>
+						<li><!-- (第三小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖特曲酒500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥1429.00</p>
+							</div>
+						</li>
+						<li><!-- (第四小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">拉菲苏维翁干红葡萄酒</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥399.00</p>
+							</div>
+						</li>
+						<li><!-- (第五小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">澳大利亚红酒小海龟</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥89.00</p>
+							</div>
+						</li>
+						<li><!-- (第六小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖泸州原浆蓝色</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥59.00</p>
+							</div>
+						</li>
+						<li><!-- (第七小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">白水杜康一坛老酒1000ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥99.00</p>
+							</div>
+						</li>
+						<li><!-- (第八小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">刘伶醉 纪念酒 500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥129.00</p>
+							</div>
+						</li>
+						<li><!-- (第九小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">苏格兰威士忌500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥128.00</p>
+							</div>
+						</li>
+						<li><!-- (第十小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu4-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">克拉克干红葡萄酒750ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥199.00</p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="indexTabConWrap"><!-- 左-下内容5 -->
+					<ul><!-- 包含：图片+中文详情+价格 ; 一共有十个图片-->
+						<li><!-- (第一小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">清仓-52°泸州老窖500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥594.00</p>
+							</div>
+						</li>
+						<li><!-- (第二小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">41°老榆林小北京500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥39.00</p>
+							</div>
+						</li>
+						<li><!-- (第三小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖特曲酒500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥1429.00</p>
+							</div>
+						</li>
+						<li><!-- (第四小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">拉菲苏维翁干红葡萄酒</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥399.00</p>
+							</div>
+						</li>
+						<li><!-- (第五小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">澳大利亚红酒小海龟</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥89.00</p>
+							</div>
+						</li>
+						<li><!-- (第六小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">泸州老窖泸州原浆蓝色</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥59.00</p>
+							</div>
+						</li>
+						<li><!-- (第七小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">白水杜康一坛老酒1000ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥99.00</p>
+							</div>
+						</li>
+						<li><!-- (第八小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">刘伶醉 纪念酒 500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥129.00</p>
+							</div>
+						</li>
+						<li><!-- (第九小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">苏格兰威士忌500ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥128.00</p>
+							</div>
+						</li>
+						<li><!-- (第十小块图片) -->
+							<div class="indexTabPic">
+								<a href="">
+									<img src="public/img/jiu5-1.jpg">
+								</a>
+							</div>
+							<div class="indexTabTit">
+								<p>
+									<a href="">克拉克干红葡萄酒750ml</a>
+								</p>
+								
+							</div>
+							<div class="indexTabPrice">
+								<p>￥199.00</p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="indexTabRight"><!-- (7)这是幻灯片下-标签页右侧的大div：分三块 -->
+				<div class="indexTabNew"><!-- 右div-上-小标签页 -->
+					<div class="indexTabNewNav"><!-- 小标签页-头部 -->
+						<ul><!-- 分左右两个标签页-头部 -->
+							<li class="on">公告信息</li>
+							<li>促销信息</li>
+						</ul>
+					</div>
+					<div class="indexTabNewCon"><!-- 小标签页-体部(1) -->
+						<ul>
+							<li><a href="">白酒品类日-11.11喜宴会场满500-200大优惠</a></li>
+							<li><a href="">国台</a></li>
+							<li><a href="">喜宴专场</a></li>
+							<li><a href="">文化酒鬼酒</a></li>
+							<li><a href="">茅台专场</a></li>
+							<li><a href="">酒仙甄选会场</a></li>
+						</ul>
+					</div>
+
+					<div class="indexTabNewCon"><!-- 小标签页-体部(2) -->
+						<ul>
+							<li><a href="">11.11喜宴会场满500-200大优惠</a></li>
+							<li><a href="">国台</a></li>
+							<li><a href="">喜宴专场</a></li>
+							<li><a href="">文化酒鬼酒</a></li>
+							<li><a href="">茅台专场</a></li>
+							<li><a href="">酒仙甄选会场</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="indexTuanBox"><!-- !!!!(7)右div中--小幻灯片1 !!!! --><!-- 与(5)中的幻灯片区域大致一样 -->
+					<div class="ppt1-1"><!-- 只改这个ppt1-1、id=myppt1-1、img、img-class='chucuo1-1' -->
+						<div id="myppt1-1" class="carousel slide" data-ride="carousel"><!-- 父id-myppt1-1 --><!-- data-ride="carousel"在页面加载时就开始动画播放 -->
+						  	<!-- 指示灯 -->
+					  		<ol class="carousel-indicators">
+					    		<li data-target="#myppt1-1" data-slide-to="0" class="active"></li><!-- data-target="#myppt1-1"找到父id --><!-- 控制轮播图下面的小点的跳转位置 -->
+							    <li data-target="#myppt1-1" data-slide-to="1"></li>
+							    <li data-target="#myppt1-1" data-slide-to="2"></li>
+							</ol>
+							<!-- 图 -->
+							<div class="carousel-inner">
+							    <div class="item active"><!-- 默认第一幅图是激活的 -->
+							      	<img src="public/img/xiaoppt1-1.jpg" class="chucuo1-1">
+							    </div>
+							    <div class="item">
+							      	<img src="public/img/xiaoppt1-2.jpg" class="chucuo1-1">
+							    </div>
+							    <div class="item">
+							      	<img src="public/img/xiaoppt1-3.jpg" class="chucuo1-1">
+							    </div>
+							</div>
+							<!-- 左右控制器 -->
+							<a class="left carousel-control" href="#myppt1-1" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left"></span><!-- 左指向的符号 -->
+							</a>
+							<a class="right carousel-control" href="#myppt1-1" data-slide="next"><!-- 右控制器，能翻到后一页 -->
+							    <span class="glyphicon glyphicon-chevron-right"></span><!-- 右指向的符号 -->
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="indexAdFocus"><!-- 右div-下-小幻灯片2 -->
+					<div class="ppt1-2">
+						<div id="myppt1-2" class="carousel slide" data-ride="carousel"><!-- 父id-myppt1-2 -->
+						  	<!-- 指示灯 -->
+					  		<ol class="carousel-indicators">
+					    		<li data-target="#myppt1-2" data-slide-to="0" class="active"></li><!-- data-target="#myppt1-2"找到父id -->
+							    <li data-target="#myppt1-2" data-slide-to="1"></li>
+							    <li data-target="#myppt1-2" data-slide-to="2"></li>
+							</ol>
+							<!-- 图 -->
+							<div class="carousel-inner">
+							    <div class="item active"><!-- 默认第一幅图是激活的 -->
+							      	<img src="public/img/xiaoppt2-1.jpg" class="chucuo1-2">
+							    </div>
+							    <div class="item">
+							      	<img src="public/img/xiaoppt2-2.jpg" class="chucuo1-2">
+							    </div>
+							    <div class="item">
+							      	<img src="public/img/xiaoppt2-3.png" class="chucuo1-2">
+							    </div>
+							</div>
+							<!-- 左右控制器 -->
+							<a class="left carousel-control" href="#myppt1-2" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left"></span><!-- 左指向的符号 -->
+							</a>
+							<a class="right carousel-control" href="#myppt1-2" data-slide="next"><!-- 右控制器，能翻到后一页 -->
+							    <span class="glyphicon glyphicon-chevron-right"></span><!-- 右指向的符号 -->
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- (8)中间大背景：里面放三个a链接-3个图片 -->
+		<div class="loadFirst"><!-- loadFirst在main里面，所以宽度是1200px -->
+			<ul>
+				<li><!-- 放第一幅图 -->
+					<a href="">
+						<img src="public/img/img8-1.png">
+					</a>
+				</li>
+				<li><!-- 放第二幅图 -->
+					<a href="">
+						<img src="public/img/img8-2.png">
+					</a>
+				</li>
+				<li><!-- 放第三幅图 -->
+					<a href="">
+						<img src="public/img/img8-3.png">
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		
+		<!-- (9)优惠推荐-长条幻灯片实现 -->
+		<div class="raceBox">
+			<div class="titleBox"><!-- 上排标题 -->
+				<div class="title_2">
+					<i class="newIndexIcon"></i><!-- 上排标题-左-小图标 -->
+					<span>优惠推荐</span><!-- 上排标题-左-文字 -->
+				</div>
+				<div class="rightNavBox"><!-- 上排标题-右-三个小点点 -->
+					<span class='on'></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class="raceListWrap"><!-- 下面的幻灯片视图 -->
+				<i class="raceLeft"></i><!-- 左右箭头 -->
+				<i class="raceRight"></i>
+
+				<div class="raceBoxs"><!-- 下面的长幻灯片内图文内容,总长是3600；包含三个大长块-->
+					<div class="raceList"><!-- 第一大块-6个图文，共三大块 --> 
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+
+					<div class="raceList"><!-- 第二大块-6个图文，共三大块 --> 
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+
+					<div class="raceList"><!-- 第三大块-6个图文，共三大块 --> 
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+		<h1>sdfrefrevfdfvdrfe</h1>
+
+	</div>
+
+	<div class="footer">
+		<div class="footermain">
+			
+		</div>
+	</div>
+
+	<div class="bottom">
+		<div class="bottommain">
+			
+		</div>
+	</div>
+</body>
+<script>
+
+
+</script>
+</html>
